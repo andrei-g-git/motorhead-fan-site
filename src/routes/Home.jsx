@@ -2,6 +2,7 @@ import React from 'react';
 import SpotifyPlaylist from '../components/SpotifyPlaylist';
 import aceOfSpades from '../assets/images/album_aceofspades.jpg';
 import orgasmatron from '../assets/images/album_orgasmatron.jpg';
+import * as albumDescriptions from '../text/HomeText';
 import sacrifice from '../assets/images/album_sacrifice.jpg';
 import '../scss/Home.scss';
 
@@ -10,6 +11,11 @@ function Home() {
         <div>
 
             <div className="album-everything">
+                <p className="album-paragraph">
+                    {
+                        albumDescriptions.ACE_OF_SPADES
+                    }
+                </p>
                 <div className="cover-with-playlist">
                     <img className="album-cover" //i suppose the album everything ...thing should be a component, too
                         src={aceOfSpades}
@@ -24,6 +30,11 @@ function Home() {
             </div>
 
             <div className="album-everything">
+                <p className="album-paragraph">
+                    {
+                        albumDescriptions.ORGASMATRON
+                    }
+                </p>                
                 <div className="cover-with-playlist">   
                     <img className="album-cover"
                         src={orgasmatron}
@@ -38,6 +49,11 @@ function Home() {
             </div>
 
             <div className="album-everything">
+                <p className="album-paragraph">
+                    {
+                        albumDescriptions.SACRIFICE
+                    }
+                </p>                     
                 <div className="cover-with-playlist">
                     <img className="album-cover"
                         src={sacrifice}
@@ -55,5 +71,4 @@ function Home() {
 }
 
 export default Home;
-
 
