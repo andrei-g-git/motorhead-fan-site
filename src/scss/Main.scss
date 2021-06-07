@@ -1,0 +1,14 @@
+@import './Variables.scss';
+
+.main{
+    background-image: url('../assets/images/metal2.jpg');
+    //height: 2048px;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.main-container{
+    background: $main-bg-color;
+    width: 992px;
+    margin: 0 auto;
+}

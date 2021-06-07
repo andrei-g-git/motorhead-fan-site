@@ -1,0 +1,23 @@
+@import './Variables.scss';
+
+@font-face{
+    src: $stylizedFontSource;
+    font-family: $stylizedFont;
+}
+
+.nav-bar{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
+
+.nav-item{
+    font-family: $stylizedFont;
+    text-decoration: none;
+    color: $nav-link-color;
+}
+
+.nav-logo{
+    width: 150px;
+}
