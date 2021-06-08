@@ -1,0 +1,16 @@
+@import './Variables.scss';
+
+.cover-with-playlist{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+    height: $playlist-height;
+}
+
+.album-cover{
+    width: auto;
+}
+
+.spotify-playlist{
+    //height: 400px;
+}

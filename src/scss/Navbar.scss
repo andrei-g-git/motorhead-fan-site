@@ -37,7 +37,7 @@
 }
 
 .going-down{
-    transform: translateY(-100%);
+    transform: translateY(-100% - 40%);
     transition: transform 0.5s ease-in-out;
 }
 
@@ -45,12 +45,10 @@
     display: flex;
     justify-content: space-between;
     position: absolute;
-    top: $nav-height - 12px;
+    top: $nav-height - $nav-border-height;
     width: 100%;
 }
 
 .ornate-border{
-    //position: absolute;
-    height: 12px;
-    //top: $nav-height - 6px;
+    height: $nav-border-height;
 }
