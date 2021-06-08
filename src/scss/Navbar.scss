@@ -6,20 +6,21 @@
 }
 
 .navbar-wrapper{
-    position: relative;
+    //position: relative;
 }
 
 .nav-bar{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    width: 100%;
-    height: 70px;
+    width: $content-width-standard; //100% doesn't work, it starts the el where it's supposed to but it ends way the hell beyond the left edge of the screen...
+    height: $nav-height;
     position: fixed;
     background-color: $main-bg-color;
-
 }
 
+.nav-items{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;    
+}
 .nav-item{
     font-family: $stylizedFont;
     text-decoration: none;
@@ -40,6 +41,16 @@
     transition: transform 0.5s ease-in-out;
 }
 
-.navbar-border{
+.nav-border-wrapper{
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    top: $nav-height - 12px;
+    width: 100%;
+}
+
+.ornate-border{
+    //position: absolute;
     height: 12px;
+    //top: $nav-height - 6px;
 }

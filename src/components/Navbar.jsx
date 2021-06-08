@@ -21,8 +21,8 @@ export default class Navbar extends Component {
             this.secondClass = "going-down"
 
         return (
-            <div className="navbar-wrapper">
-                <div className={"nav-bar " + this.secondClass}>
+            <div className={"nav-bar " + this.secondClass}>
+                <div className="nav-items">
                     <a className="nav-item"
                         href="/"
                     >
@@ -55,10 +55,29 @@ export default class Navbar extends Component {
                     </a>
                 </div>
 
-                <img className={"navbar-border " + this.secondClass}
-                    src={border} //doesn't render where it's supposed to or translate in and out but need second class to even see it
-                    alt="border"
-                />
+                <div className="nav-border-wrapper">
+                    <div className="nav-half-border">
+                        <img className="ornate-border"
+                            src={border}
+                            alt="border"
+                        />
+                        <img className="ornate-border"
+                            src={border}
+                            alt="border"
+                        />
+                    </div>
+
+                    <div className="nav-half-border">
+                        <img className="ornate-border"
+                            src={border}
+                            alt="border"
+                        />
+                        <img className="ornate-border"
+                            src={border}
+                            alt="border"
+                        />
+                    </div>
+                </div>                                                              
             </div>
         )
     }
