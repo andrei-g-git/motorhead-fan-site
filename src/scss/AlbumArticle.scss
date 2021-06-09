@@ -14,3 +14,13 @@
 .spotify-playlist{
     //height: 400px;
 }
+
+.itunes-playlist{
+    height: 400px;
+    width: 30%;
+    border: 1px solid white; //because none of the playlists are fucking loading
+}
+
+.album-paragraph{
+    color: $standard-text-color;
+}
