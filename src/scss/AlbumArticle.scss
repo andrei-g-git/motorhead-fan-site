@@ -1,15 +1,18 @@
 @import './Variables.scss';
 
-.cover-with-playlist{
+.cover-with-playlist{ //not using 
     display: flex;
     justify-content: space-between;
     margin-top: 40px;
     height: $playlist-height;
 }
 
-.album-cover{
-    //width: auto; //this messes with bootstrap
-    //padding-top: 20%;
+.album-everything{
+    width: 100%;
+}
+
+.album-cover, .itunes-playlist{
+    margin-bottom: 1rem;;
 }
 
 // .spotify-playlist{
@@ -17,12 +20,27 @@
 // }
 
 .itunes-playlist{
-    //height: 400px;
-    //width: 30%;
     min-width: 200px;
-    //border: 1px solid white; //because none of the playlists are fucking loading
+}
+
+.album-title{
+    color: $standard-text-color;
+    padding: 0; 
+    font-size: larger;  
+    margin-top: 2rem;
 }
 
 .album-paragraph{
     color: $standard-text-color;
+    padding: 0;
+}
+
+@media screen and (max-width: 576px){
+    .itunes-playlist{
+        min-height: 400px;
+        width: 300px;
+    }
+    .cover-with-playlist{
+        align-content: center; //doesn't work
+    }
 }

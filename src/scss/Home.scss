@@ -1,13 +1,10 @@
+@import './Variables.scss';
+
 .home-container{
-    padding: 100px 10% 0 10%; //should probably be px
+    padding: 150px 10% 0 10%; 
 }
 
-// .cover-with-playlist{
-//     display: flex;
-//     justify-content: space-between;
-//     margin-top: 40px;
-// }
+.introduction-home{
+    color: $standard-text-color;
+}
 
-// .album-cover{
-//     width: 38%;
-// }

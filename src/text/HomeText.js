@@ -1,3 +1,13 @@
+export const INTRO = `
+    Over four decades, Motörhead released 23 studio albums, a vast array of music now embedded 
+    into rock folklore. It’s fair to say that without this band the whole shape of music as we 
+    know it today would have been very different.Only Lemmy was an ever-present, of course, 
+    with 10 other musicians appearing at various stages of the band’s recording career. And not 
+    all of the albums are cast iron classics. However, there are certainly a number of landmark 
+    records, ones that appealed to punks, metalheads, rockers… These are some of my favorites.
+`;
+
+
 export const ACE_OF_SPADES = `
     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex non omnis impedit 
     rem quasi aliquid ab sint repellendus! Itaque fuga ipsam perferendis dolor, sapiente 
@@ -10,7 +20,7 @@ export const ACE_OF_SPADES = `
     
     Blanditiis necessitatibus, harum architecto debitis excepturi dolorem voluptatem eos 
     omnis aperiam, nulla quod enim, soluta veritatis molestiae aut.    
-` 
+`;
 
 export const ORGASMATRON = `
     Iusto debitis hic delectus officiis, expedita animi blanditiis quaerat eum. Voluptatem 
@@ -19,7 +29,7 @@ export const ORGASMATRON = `
     incidunt eum cupiditate magnam, dolor perspiciatis iusto ut! Voluptates quis iste 
     veritatis dolores obcaecati, quo ullam, hic officiis eius incidunt fuga officia in earum 
     similique quas! Fuga expedita accusantium vitae nihil nulla veniam minus exercitationem?
-`
+`;
 
 export const SACRIFICE = `
     Sint ab possimus incidunt magni, porro nemo at nihil deleniti dolore ipsam illum 
@@ -31,5 +41,5 @@ export const SACRIFICE = `
     Voluptate deleniti temporibus earum quaerat sint sequi fugiat praesentium, iusto quos 
     recusandae. Animi repellat facilis dolores beatae? Recusandae aliquid totam reprehenderit 
     magnam? Totam dignissimos magnam vero officiis quod molestiae enim optio rerum laborum libero.
-`
+`;
 

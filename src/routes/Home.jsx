@@ -5,40 +5,47 @@ import aceOfSpades from '../assets/images/album_aceofspades.jpg';
 import orgasmatron from '../assets/images/album_orgasmatron.jpg';
 import album1916 from '../assets/images/1916.jpg';
 import theBest from '../assets/images/the_best_of_motorhead.jpg';
-import * as albumDescriptions from '../text/HomeText';
+import * as textContent from '../text/HomeText';
 import sacrifice from '../assets/images/album_sacrifice.jpg';
 import '../scss/Home.scss';
 
 function Home() {
     return (
         <div className="home-container">
-            <AlbumArticle article={albumDescriptions.SACRIFICE}
+
+            <p className="introduction-home">
+                {
+                    textContent.INTRO
+                }
+            </p>
+
+            <AlbumArticle article={textContent.SACRIFICE}
                 cover={album1916}
                 playlistUrl="https://embed.music.apple.com/us/album/1916/192751993"
-                title="1916"
+                title="1. 1916"
             />  
 
-            <AlbumArticle article={albumDescriptions.ACE_OF_SPADES}
+            <AlbumArticle article={textContent.ACE_OF_SPADES}
                 cover={aceOfSpades}
                 playlistUrl="https://embed.music.apple.com/us/album/ace-of-spades/1141561107"
-                title="ace-of-spades"
+                title="2. Ace of Spades"
             />
 
-            <AlbumArticle article={albumDescriptions.ORGASMATRON}
+            <AlbumArticle article={textContent.ORGASMATRON}
                 cover={orgasmatron}
                 playlistUrl="https://embed.music.apple.com/us/album/orgasmatron-expanded-bonus-track-edition/1143706159"
-                title="orgasmatron"
+                title="3. Orgasmatron"
             />
 
-            <AlbumArticle article={albumDescriptions.SACRIFICE}
+            <AlbumArticle article={textContent.SACRIFICE}
                 cover={sacrifice}
                 playlistUrl="https://embed.music.apple.com/us/album/sacrifice/1446663543"
-                title="sacrifice"
+                title="4. Sacrifice"
             />
-            <AlbumArticle article={albumDescriptions.SACRIFICE}
+            <AlbumArticle article={textContent.SACRIFICE}
                 cover={theBest}
                 playlistUrl="https://embed.music.apple.com/us/album/the-best-of-mot%C3%B6rhead/1143689217"
-                title="-the-best-of-motorhead"
+                title="5. The Best of Motorhead"
             />            
         </div>
     )
