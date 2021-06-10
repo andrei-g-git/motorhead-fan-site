@@ -2,13 +2,19 @@
 
 .main{
     background-image: url('../assets/images/metal2.jpg');
-    //height: 2048px;
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
 
 .main-container{
     background: $main-bg-color;
-    width: $content-width-standard;
+    width: 80%;
+    max-width: $content-width-standard;
     margin: 0 auto;
+}
+
+@media screen and (max-width: 992px){
+    .main-container{
+        width: 100%;
+    }
 }

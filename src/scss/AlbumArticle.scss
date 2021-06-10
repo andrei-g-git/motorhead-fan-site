@@ -8,17 +8,19 @@
 }
 
 .album-cover{
-    width: auto;
+    //width: auto; //this messes with bootstrap
+    //padding-top: 20%;
 }
 
-.spotify-playlist{
-    //height: 400px;
-}
+// .spotify-playlist{
+//     //height: 400px;   
+// }
 
 .itunes-playlist{
-    height: 400px;
-    width: 30%;
-    border: 1px solid white; //because none of the playlists are fucking loading
+    //height: 400px;
+    //width: 30%;
+    min-width: 200px;
+    //border: 1px solid white; //because none of the playlists are fucking loading
 }
 
 .album-paragraph{

@@ -52,3 +52,9 @@
 .ornate-border{
     height: $nav-border-height;
 }
+
+@media screen and (max-width: $content-width-standard){
+    .nav-bar{
+        width: 100%;
+    }
+}
