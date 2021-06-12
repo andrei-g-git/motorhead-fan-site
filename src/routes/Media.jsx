@@ -1,5 +1,6 @@
 import React from 'react'; 
 import PicCard from '../components/PicCard';
+import PicModal from '../components/PicModal';
 import * as media from '../data/MediaPicCards';
 import * as actions from '../redux/actions';
 import { connect } from 'react-redux';
@@ -14,11 +15,17 @@ function Media(props) {
                         <PicCard image={pic.src}
                             caption={pic.caption}
                             index={index}
-                            clicked={handleImageClick}
+                            key={pic.id}
                         />
                     )
                 }
             </div>
+
+            <PicModal image={extractImage(props.picIndex)}
+                caption={extractCaption(props.picIndex)}
+                visible={props.showModal}
+            />
+
             <div>
                 {
                     props.showModal ? 
@@ -31,13 +38,25 @@ function Media(props) {
     )
 }
 
-const handleImageClick = (index) => {
-    //
+const extractCaption = (index) => {
+
+    console.log(index);
+
+    return media
+        .picCards[index]
+        .caption;
+}
+
+const extractImage = (index) => {
+    return media
+        .picCards[index]
+        .src;
 }
 
 const mapStateToProps = (state) => {
     return {
-        showModal: state.uiReducer.picSwiperVisible
+        showModal: state.uiReducer.picSwiperVisible,
+        picIndex: state.uiReducer.picIndex
     }
 }
 

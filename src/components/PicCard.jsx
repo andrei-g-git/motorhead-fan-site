@@ -15,13 +15,6 @@ function PicCard(props) {
                 src={props.image}
                 alt="pic"
             />
-            <div className="card-body">
-                <div className="card-text">
-                    {
-                        //props.caption //NO, this is for the modal
-                    }
-                </div>
-            </div>
         </div>
     )
 }
