@@ -1,14 +1,15 @@
 import React from 'react';
+import { connect } from 'react-redux';
+import * as actions from '../redux/actions'
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 function PicCard(props) {
     return (
         <div className="card"
-        style={{ //test delete
-            width: "120px",
-            height: "120px",
-            //border: "1px solid white"
-        }}        
+            onClick={() => {
+                props.handleClick(props.index);
+                props.toggleModal(true);
+            }}
         >
             <img className="card-img-top"
                 src={props.image}
@@ -17,7 +18,7 @@ function PicCard(props) {
             <div className="card-body">
                 <div className="card-text">
                     {
-                        props.caption
+                        //props.caption //NO, this is for the modal
                     }
                 </div>
             </div>
@@ -25,4 +26,21 @@ function PicCard(props) {
     )
 }
 
-export default PicCard;
+const mapStateToProps = () => {
+    return {
+
+    }
+}
+
+const mapDispatchToProps = (dispatch) => {
+    return{
+        handleClick: (index) => {
+            dispatch(actions.picIndexed(index));
+        },
+        toggleModal: (show) => {
+            dispatch(actions.picSwiperToggled(show));
+        }    
+    }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(PicCard);

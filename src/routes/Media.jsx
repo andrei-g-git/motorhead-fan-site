@@ -1,28 +1,44 @@
-import React from 'react';
+import React from 'react'; 
 import PicCard from '../components/PicCard';
 import * as media from '../data/MediaPicCards';
-import 'bootstrap/dist/css/bootstrap.min.css';
+import * as actions from '../redux/actions';
+import { connect } from 'react-redux';
+import '../scss/Media.scss';
 
-function Media() {
+function Media(props) {
     return (
-        <div className="container">
-            {
-                media.picCards.map((picRow) => 
-                    <div className="row">
-                        {
-                            picRow.map((pic) => 
-                                <div className="col-lg-3 col-md-4 col-sm-6 col-xs-12">
-                                    <PicCard image={pic.src}
-                                        caption={pic.caption}
-                                    />
-                                </div>
-                            )
-                        }
-                    </div>
-                )
-            }
+        <div>
+            <div className="media-grid">
+                {
+                    media.picCards.map((pic, index) => 
+                        <PicCard image={pic.src}
+                            caption={pic.caption}
+                            index={index}
+                            clicked={handleImageClick}
+                        />
+                    )
+                }
+            </div>
+            <div>
+                {
+                    props.showModal ? 
+                        <h1>VISIBLE!</h1>
+                    : 
+                        <h1>HIDDEN!</h1>
+                }
+            </div>
         </div>
     )
 }
 
-export default Media;
+const handleImageClick = (index) => {
+    //
+}
+
+const mapStateToProps = (state) => {
+    return {
+        showModal: state.uiReducer.picSwiperVisible
+    }
+}
+
+export default connect(mapStateToProps)(Media);
