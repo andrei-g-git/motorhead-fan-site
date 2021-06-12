@@ -43,9 +43,9 @@ export default class Navbar extends Component {
                     </a>
 
                     <a className="nav-item"
-                        href="/about"
+                        href="/media"
                     >
-                        About
+                        Media
                     </a>
 
                     <a className="nav-item"

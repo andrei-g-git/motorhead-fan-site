@@ -5,7 +5,7 @@ import aceOfSpades from '../assets/images/album_aceofspades.jpg';
 import orgasmatron from '../assets/images/album_orgasmatron.jpg';
 import album1916 from '../assets/images/1916.jpg';
 import theBest from '../assets/images/the_best_of_motorhead.jpg';
-import * as textContent from '../text/HomeText';
+import * as textContent from '../data/HomeText';
 import sacrifice from '../assets/images/album_sacrifice.jpg';
 import '../scss/Home.scss';
 
@@ -19,7 +19,7 @@ function Home() {
                 }
             </p>
 
-            <AlbumArticle article={textContent.SACRIFICE}
+            <AlbumArticle article={textContent.SACRIFICE} //should probably map?
                 cover={album1916}
                 playlistUrl="https://embed.music.apple.com/us/album/1916/192751993"
                 title="1. 1916"
