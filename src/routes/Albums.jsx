@@ -6,16 +6,13 @@ import album1916 from '../assets/images/1916.jpg';
 import theBest from '../assets/images/the_best_of_motorhead.jpg';
 import * as textContent from '../data/HomeText';
 import sacrifice from '../assets/images/album_sacrifice.jpg';
-import '../scss/Home.scss';
+import '../scss/Albums.scss';
 
-function Home() {
+function Albums() {
     return (
-        <div className="home-container">
+        <div className="albums-container">
 
-            <br/><br/><br/><br/><br/><br/><br/><h1>WELCOME TO THE WEBSITE!</h1><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-            <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-
-{/*             <p className="introduction-home">
+            <p className="introduction-albums">
                 {
                     textContent.INTRO
                 }
@@ -48,9 +45,9 @@ function Home() {
                 cover={theBest}
                 playlistUrl="https://embed.music.apple.com/us/album/the-best-of-mot%C3%B6rhead/1143689217"
                 title="5. The Best of Motorhead"
-            />   */}          
+            />            
         </div>
     )
 }
 
-export default Home;
+export default Albums;

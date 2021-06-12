@@ -1,3 +1,13 @@
+@import './Variables.scss';
+
+.media-container{
+    padding: 
+        $std-container-padding-top
+        $std-container-padding-right
+        $std-container-padding-bottom
+        $std-container-padding-left;
+}
+
 .media-grid{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;

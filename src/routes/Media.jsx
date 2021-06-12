@@ -8,7 +8,7 @@ import '../scss/Media.scss';
 
 function Media(props) {
     return (
-        <div>
+        <div className="media-container">
             <div className="media-grid">
                 {
                     media.picCards.map((pic, index) => 

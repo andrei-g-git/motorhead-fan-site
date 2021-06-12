@@ -2,6 +2,7 @@ import React from 'react';
 import Navbar from './Navbar';
 import Home from '../routes/Home';
 import Media from '../routes/Media';
+import Albums from '../routes/Albums';
 import { Switch, Route } from 'react-router-dom';
 import '../scss/Main.scss';
 
@@ -17,6 +18,9 @@ function Main(){
                     <Route path="/media">
                         <Media />
                     </Route>
+                    <Route path="/albums">
+                        <Albums />
+                    </Route>                    
                 </Switch>
             </div>
         </div>
