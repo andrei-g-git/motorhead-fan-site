@@ -1,18 +1,14 @@
 @import './Variables.scss';
 
 .headline-container{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     margin-top: 20px;
 }
 
-.headline{
+.headline{ 
     color: $standard-text-color;
 }
 
-.snippet{
-    max-width: 700px;
+.snippet{ 
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;    

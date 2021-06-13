@@ -6,8 +6,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 function Headline(props) {
     return (
         <div className="headline-container container">
-            <div className="row">
-                <section className="headline col-sm-8">
+            <div className="row justify-content-sm-between">
+                <section className="headline col-sm-10">
                     <h6 className="headline-title">
                         {
                             props.title
@@ -19,7 +19,7 @@ function Headline(props) {
                         }
                     </p>
                 </section>
-                <div className="col-sm-4">
+                <div className="col-sm-2">
                     <ReadMore></ReadMore>
                 </div>               
             </div>                         
