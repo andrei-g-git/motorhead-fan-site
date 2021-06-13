@@ -4,7 +4,7 @@ export const tours = [ //should have article content and 'read more' button
     "20 Nov 2015  -  Zenith,	                   Munich",
     "21 Nov 2015  -  Zenith,	                   Munich",
     "24 Nov 2015  -  Jahrhunderthalle,           Frankfurt",	
-    "25 Nov 2015  -  Arena Ludwigsburg,	       Ludwigsburg",
+    "25 Nov 2015  -  Arena Ludwigsburg",//,	       Ludwigsburg",
     "30 Nov 2015  -  Scandinavian Congress,      Århus",
     "01 Dec 2015  -  Scandinavium,	           Goteborg",
     "03 Dec 2015  -  Oslo Spektrum,	           Oslo",

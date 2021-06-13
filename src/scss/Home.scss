@@ -1,4 +1,5 @@
 @import './Variables.scss';
+@import './Mixins.scss';
 
 @font-face{
     src: $stylizedFontSource;
@@ -10,13 +11,11 @@
     height: 2000px; //testing, delete
 }
 
-.home-header{
+.text-over-bg{
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-left: -10%;
-    padding-right: -10%;
 }
 
 .home-header-text{
@@ -29,25 +28,39 @@
     z-index: 1; //can't be on same level with bg, flex would display them next to one another
 }
 
-.home-header-image{ //this has a higher z-index than the nav bar would normally have...
-    background-image: url("../assets/images/home-header-small.png");
-    --ratio: calc(992 / 1700); //the $content-width-standard-calc variable doesn't work in calc()
-
-    background-size: 992px 550px;
-    width: $content-width-standard;
-    height: calc(710px * var(--ratio));    
+//REPEATS IN secondary-backgrounds-home
+.home-header-image{ //this has a higher z-index than the nav bar would normally have... 
+    @include standardBackgroundPic("../assets/images/home-header-small.png");
 }
 
 .below-header-container{
     padding: 
-        50px
+        0
         $std-container-padding-right
         $std-container-padding-bottom
         $std-container-padding-left;    
 }
 
-.news-label{
+//REPEATS IN home-header-image
+.secondary-backgrounds-home{
+    //background-image: url("../assets/images/textBg1.jpg");
+    // background-image: url("../assets/images/home-header-small.png");    
+    // --ratio: calc(992 / 1700); 
+
+    // background-size: 992px 550px;
+    // width: 992px;
+    // height: 550px;//calc(710px * var(--ratio));     
+    @include standardBackgroundPic("../assets/images/textBg1.jpg");
+}
+
+.section-label-left{
     color: $standard-text-color;
+    margin-top: 50px;
+}
+
+.home-news{
+    position: absolute; //so it needs this to stack up in a flex container rather than sit adjacent to sibling; for some reason the width is 0 without
+    z-index: 1;
 }
 
 .tours-home{
@@ -55,7 +68,7 @@
 }
 
 .concert-video-home{
-    margin: 5px 0;
+    //margin: 5px 0;
 }
 
 .tours-list{

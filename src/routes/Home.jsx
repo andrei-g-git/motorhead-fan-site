@@ -2,37 +2,43 @@ import React from 'react';
 import Headline from '../components/Headline';
 import { news } from '../data/News';
 import { tours } from '../data/Tours';
+import { interviews } from '../data/Interviews';
 import '../scss/Home.scss';
 
 function Home() {
     return (
         <div className="home-container">
-            <div className="home-header">
+            <div className="text-over-bg">
                 <div className="home-header-image" />   
                 <div className="home-header-text">
                     If you think you're too old for rock'n'roll, then you are!    
                 </div>             
             </div>
-            <div className="below-header-container">
-                <label className="news-label">
-                    News
-                </label>
 
-                <div className="home-news">
-                    <Headline title={news[0].title} 
-                        snippet={news[0].snippet}
-                    />
-                    <Headline title={news[1].title} 
-                        snippet={news[1].snippet}
-                    />
-                    <Headline title={news[2].title} 
-                        snippet={news[2].snippet}
-                    />
-                    <Headline title={news[3].title} 
-                        snippet={news[3].snippet}
-                    />                                                            
+{/*             <div className="below-header-container"> */}
+                <div className="text-over-bg"> {/* these should definitely be components */}
+
+                    <div className="secondary-backgrounds-home" />
+
+{/*                     <label className="section-label-left">
+                        News
+                    </label> */}
+
+                    <div className="home-news"> 
+                        <Headline title={news[0].title} 
+                            snippet={news[0].snippet}
+                        />
+                        <Headline title={news[1].title} 
+                            snippet={news[1].snippet}
+                        />
+                        <Headline title={news[2].title} 
+                            snippet={news[2].snippet}
+                        />
+                        <Headline title={news[3].title} 
+                            snippet={news[3].snippet}
+                        />                                                            
+                    </div>
                 </div>
-
                 <div className="tours-home container">
                     <div className="row">
                         <iframe className="concert-video-home col-md-6" 
@@ -53,7 +59,23 @@ function Home() {
                         </div>
                     </div>
                 </div>
-            </div>
+
+                <label className="section-label-left">
+                    Interviews
+                </label>
+
+                <div className="home-news"> 
+                    <Headline title={interviews[0].title} 
+                        snippet={interviews[0].snippet}
+                    />
+                    <Headline title={interviews[1].title} 
+                        snippet={interviews[1].snippet}
+                    />
+                    <Headline title={interviews[2].title} 
+                        snippet={interviews[2].snippet}
+                    />                                                          
+                </div>
+{/*             </div> */}      
 
         </div>
     )

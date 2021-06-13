@@ -10,3 +10,12 @@
     background-color: rgba(0, 0, 0, 0.8);
     z-index: 999;     
 }
+
+@mixin standardBackgroundPic($src){
+    background-image: url($src);
+    --ratio: calc(992 / 1700); //the $content-width-standard-calc variable doesn't work in calc()
+
+    background-size: 992px 550px;
+    width: $content-width-standard;
+    height: calc(710px * var(--ratio));  
+}
