@@ -1,10 +1,42 @@
 @import './Variables.scss';
 
-.home-container{
-    padding: 150px 10% 0 10%; 
+@font-face{
+    src: $stylizedFontSource;
+    font-family: $stylizedFont;
 }
 
-.introduction-home{
+.home-container{
+    padding: 
+        0
+        0
+        $std-container-padding-bottom //which is ..er... 0
+        0;
+
+    height: 2000px; //testing, delete
+}
+
+.home-header{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+}
+
+.home-header-text{
+    position: absolute;
+    font-family: $stylizedFont;
+    font-size: x-large;
+    letter-spacing: 0.15rem;    
     color: $standard-text-color;
 }
+
+.home-header-image{ //this has a higher z-index than the nav bar would normally have...
+    background-image: url("../assets/images/home-header-small.png");
+    --ratio: calc(992 / 1700); //the $content-width-standard-calc variable doesn't work in calc()
+
+    background-size: 992px 550px;
+    width: $content-width-standard;
+    height: calc(710px * var(--ratio));    
+}
+
 

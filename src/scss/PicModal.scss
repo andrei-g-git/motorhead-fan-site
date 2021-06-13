@@ -3,6 +3,7 @@
 .pic-modal-background{
     @include modalBackground();
 
+    //not sure if I need this...
     width: calc(100vw - 2px); //overrides
     height: calc(100vh - 2px);
 
