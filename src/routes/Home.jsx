@@ -1,6 +1,7 @@
 import React from 'react';
 import Headline from '../components/Headline';
 import { news } from '../data/News';
+import { tours } from '../data/Tours';
 import '../scss/Home.scss';
 
 function Home() {
@@ -30,6 +31,27 @@ function Home() {
                     <Headline title={news[3].title} 
                         snippet={news[3].snippet}
                     />                                                            
+                </div>
+
+                <div className="tours-home container">
+                    <div className="row">
+                        <iframe className="concert-video-home col-md-6" 
+                            src="https://www.youtube.com/embed/H7-ayoJKZ_Q"
+                            width="480"
+                            height="270"
+                            title="change-this"
+                        />
+                        <div className="tours-list col-md-6">
+                            <h4>Last tours:</h4>
+                            <h5>{ tours[0] }</h5>
+                            <h5>{ tours[1] }</h5>
+                            <h5>{ tours[2] }</h5>
+                            <h5>{ tours[3] }</h5>
+                            <h5>{ tours[4] }</h5>
+                            <h5>{ tours[5] }</h5>
+                            <h5>{ tours[6] }</h5>
+                        </div>
+                    </div>
                 </div>
             </div>
 
