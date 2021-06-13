@@ -4,7 +4,7 @@ import aceOfSpades from '../assets/images/album_aceofspades.jpg';
 import orgasmatron from '../assets/images/album_orgasmatron.jpg';
 import album1916 from '../assets/images/1916.jpg';
 import theBest from '../assets/images/the_best_of_motorhead.jpg';
-import * as textContent from '../data/HomeText';
+import * as textContent from '../data/AlbumText';
 import sacrifice from '../assets/images/album_sacrifice.jpg';
 import '../scss/Albums.scss';
 

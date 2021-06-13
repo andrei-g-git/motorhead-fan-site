@@ -6,12 +6,7 @@
 }
 
 .home-container{
-    padding: 
-        0
-        0
-        $std-container-padding-bottom //which is ..er... 0
-        0;
-
+    padding: 0;
     height: 2000px; //testing, delete
 }
 
@@ -19,15 +14,19 @@
     position: relative;
     display: flex;
     justify-content: center;
-    align-items: center;    
+    align-items: center;
+    padding-left: -10%;
+    padding-right: -10%;
 }
 
 .home-header-text{
     position: absolute;
+
     font-family: $stylizedFont;
     font-size: x-large;
     letter-spacing: 0.15rem;    
     color: $standard-text-color;
+    z-index: 1; //can't be on same level with bg, flex would display them next to one another
 }
 
 .home-header-image{ //this has a higher z-index than the nav bar would normally have...
@@ -37,6 +36,18 @@
     background-size: 992px 550px;
     width: $content-width-standard;
     height: calc(710px * var(--ratio));    
+}
+
+.below-header-container{
+    padding: 
+        50px
+        $std-container-padding-right
+        $std-container-padding-bottom
+        $std-container-padding-left;    
+}
+
+.news-label{
+    color: $standard-text-color;
 }
 
 
