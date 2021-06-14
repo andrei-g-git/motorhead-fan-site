@@ -1,9 +1,12 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import * as actions from '../redux/actions';
 import logo from '../assets/images/logo2.png';
 import border from '../assets/images/fangs.png';//'../assets/images/divider8medium-white.png';
+import hamburger from '../assets/images/hamburger-stylized.png';
 import '../scss/Navbar.scss'; 
 
-export default class Navbar extends Component {
+class Navbar extends Component {
     constructor(){
         super();
 
@@ -23,9 +26,21 @@ export default class Navbar extends Component {
         :
             this.secondClass = "going-down"
 
+        this.props.menuVisible ? 
+            this.menuVisibilityClass = " menu-visible" //mind the space
+        :
+            this.menuVisibilityClass = ""
+
         return (
             <div className={"nav-bar " + this.secondClass}>
-                <div className="nav-items">
+
+                <img className="hamburger-menu" //obv should be a component - or maybe not, I just need an onclick and the implementation is related to nav elements...
+                    src={hamburger}
+                    alt="hamburger"
+                    onClick={() => this.props.handleMenuClick(!this.props.menuVisible)}
+                />
+
+                <div className={"nav-items" + this.menuVisibilityClass}>
                     <a className="nav-item"
                         href="/"
                     >
@@ -129,3 +144,17 @@ export default class Navbar extends Component {
         console.log(this.state.goingUp); //this isn't in real time, setState is async       
     }    
 }
+
+const mapStateToProps = (state) => {
+    return{
+        menuVisible: state.uiReducer.navMenuVisible
+    }
+}
+const mapDispatchToProps = (dispatch) => {
+    return{
+        handleMenuClick: (visible) => {
+            dispatch(actions.hamburgerClicked(visible));
+        }
+    }
+}
+export default connect(mapStateToProps, mapDispatchToProps)(Navbar);

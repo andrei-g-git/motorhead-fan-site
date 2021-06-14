@@ -13,3 +13,10 @@ export const picIndexed = (index) => {
         payload: index
     }
 }
+
+export const hamburgerClicked = (clicked) => {
+    return{
+        type: actionTypes.HAMBURGER_CLICKED,
+        payload: clicked
+    }
+}

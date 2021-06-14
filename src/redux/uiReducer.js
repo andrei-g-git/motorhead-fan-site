@@ -2,7 +2,8 @@ import * as actionTypes from './actionTypes';
 
 const initialState = {
     picSwiperVisible: false,
-    picIndex: 0
+    picIndex: 0,
+    navMenuVisible: false
 }
 
 export const uiReducer = (state = initialState, action) => {
@@ -16,7 +17,12 @@ export const uiReducer = (state = initialState, action) => {
             return{
                 ...state,
                 picIndex: action.payload
-            }            
+            }     
+        case actionTypes.HAMBURGER_CLICKED:
+            return{
+                ...state,
+                navMenuVisible: action.payload
+            }       
         default:
             return state;
     }
