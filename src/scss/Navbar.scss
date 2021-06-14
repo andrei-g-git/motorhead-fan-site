@@ -36,8 +36,15 @@
 .menu-visible{
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     height: 600px;
     border: 5px solid red;
+}
+// .nav-item-visible{
+//     display: block;
+// }
+#nav-item-visible_1, #nav-item-visible_2, #nav-item-visible_3, #nav-item-visible_4 {
+    display: block;
 }
 .nav-logo{
     width: 150px;
