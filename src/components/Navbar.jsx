@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import logo from '../assets/images/logo2.png';
-import border from '../assets/images/divider8medium-white.png';
+import border from '../assets/images/fangs.png';//'../assets/images/divider8medium-white.png';
 import '../scss/Navbar.scss'; 
 
 export default class Navbar extends Component {
@@ -11,6 +11,9 @@ export default class Navbar extends Component {
             prevScrollY: 0, //should use a ref or something, re-rendering the whole thing every scrolled pixel is inefficient
             goingUp: false
         }
+
+        //this.fangCount = new Array(8); 
+        this.fangCount = [1, 2, 3, 4, 5, 6, 7, 8];
     }
 
     render() {
@@ -57,25 +60,43 @@ export default class Navbar extends Component {
 
                 <div className="nav-border-wrapper">
                     <div className="nav-half-border">
-                        <img className="ornate-border"
+                        {/* <img className="ornate-border"
                             src={border}
                             alt="border"
                         />
                         <img className="ornate-border"
                             src={border}
                             alt="border"
-                        />
+                        /> */}
+                        {
+                            this.fangCount.map((each, index) => 
+                                <img className={"ornate-border left-" + index}
+                                    src={border}
+                                    alt="border"
+                                    key={index}
+                                />
+                            )
+                        }
                     </div>
 
                     <div className="nav-half-border">
-                        <img className="ornate-border"
+                        {/* <img className="ornate-border"
                             src={border}
                             alt="border"
                         />
                         <img className="ornate-border"
                             src={border}
                             alt="border"
-                        />
+                        /> */}
+                        {
+                            this.fangCount.map((each, index) => 
+                                <img className={"ornate-border right-" + index}
+                                    src={border}
+                                    alt="border"
+                                    key={index}
+                                />
+                            )
+                        }                        
                     </div>
                 </div>                                                              
             </div>

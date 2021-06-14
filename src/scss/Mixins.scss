@@ -15,7 +15,7 @@
     background-image: url($src);
     --ratio: calc(992 / 1700); //the $content-width-standard-calc variable doesn't work in calc()
 
-    background-size: 992px 550px;
+    //background-size: 992px 550px;
     width: $content-width-standard;
     height: calc(710px * var(--ratio));  
 }

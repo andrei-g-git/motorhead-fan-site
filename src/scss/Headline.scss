@@ -13,3 +13,16 @@
     white-space: nowrap;
     text-overflow: ellipsis;    
 }
+
+@media screen and (max-width: 576px){
+    .headline-container{
+        margin-top: 3px;
+    }
+    .headline-title, .snippet{
+        margin: 0; 
+        font-size: small;
+    }
+    .read-more{
+        font-size: small;
+    }
+}

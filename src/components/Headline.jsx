@@ -19,8 +19,10 @@ function Headline(props) {
                         }
                     </p>
                 </section>
-                <div className="col-sm-2">
-                    <ReadMore></ReadMore>
+                <div className="read-more col-sm-2">
+                    <input type="button" //should be image
+                        value="Read more"
+                    />
                 </div>               
             </div>                         
 

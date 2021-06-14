@@ -3,13 +3,19 @@ import Headline from '../components/Headline';
 import { news } from '../data/News';
 import { tours } from '../data/Tours';
 import { interviews } from '../data/Interviews';
+import headerImage from '../assets/images/home-header-small.png';
+import listBg1 from '../assets/images/textBg1.jpg';
+import listBg2 from '../assets/images/textBg2.jpg';
 import '../scss/Home.scss';
 
 function Home() {
     return (
         <div className="home-container">
             <div className="text-over-bg">
-                <div className="home-header-image" />   
+                <img className="home-header-image" 
+                    src={headerImage}
+                    alt="header_image"
+                />
                 <div className="home-header-text">
                     If you think you're too old for rock'n'roll, then you are!    
                 </div>             
@@ -18,13 +24,15 @@ function Home() {
 {/*             <div className="below-header-container"> */}
                 <div className="text-over-bg"> {/* these should definitely be components */}
 
-                    <div className="secondary-backgrounds-home" />
-
-{/*                     <label className="section-label-left">
-                        News
-                    </label> */}
+                    <img className="secondary-backgrounds-home"
+                        src={listBg1}
+                        alt="text-bg"
+                    />
 
                     <div className="home-news"> 
+                        <label className="section-label-left">
+                            News
+                        </label>
                         <Headline title={news[0].title} 
                             snippet={news[0].snippet}
                         />
@@ -60,20 +68,26 @@ function Home() {
                     </div>
                 </div>
 
-                <label className="section-label-left">
-                    Interviews
-                </label>
-
-                <div className="home-news"> 
-                    <Headline title={interviews[0].title} 
-                        snippet={interviews[0].snippet}
+                <div className="text-over-bg"> {/* these should definitely be components */}
+                    <img className="secondary-backgrounds-home"
+                        src={listBg2}
+                        alt="text-bg"
                     />
-                    <Headline title={interviews[1].title} 
-                        snippet={interviews[1].snippet}
-                    />
-                    <Headline title={interviews[2].title} 
-                        snippet={interviews[2].snippet}
-                    />                                                          
+                    <div className="home-news"> 
+                    
+                    <label className="section-label-left">
+                        Interviews
+                    </label>                    
+                        <Headline title={interviews[0].title} 
+                            snippet={interviews[0].snippet}
+                        />
+                        <Headline title={interviews[1].title} 
+                            snippet={interviews[1].snippet}
+                        />
+                        <Headline title={interviews[2].title} 
+                            snippet={interviews[2].snippet}
+                        />                                                          
+                    </div>
                 </div>
 {/*             </div> */}      
 

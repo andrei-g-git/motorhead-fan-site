@@ -7,7 +7,7 @@
 }
 
 .home-container{
-    padding: 0;
+    padding-top: $nav-height;
     height: 2000px; //testing, delete
 }
 
@@ -30,7 +30,9 @@
 
 //REPEATS IN secondary-backgrounds-home
 .home-header-image{ //this has a higher z-index than the nav bar would normally have... 
-    @include standardBackgroundPic("../assets/images/home-header-small.png");
+    //@include standardBackgroundPic("../assets/images/home-header-small.png");
+    width: 100%;
+    height: auto;
 }
 
 .below-header-container{
@@ -43,23 +45,18 @@
 
 //REPEATS IN home-header-image
 .secondary-backgrounds-home{
-    //background-image: url("../assets/images/textBg1.jpg");
-    // background-image: url("../assets/images/home-header-small.png");    
-    // --ratio: calc(992 / 1700); 
-
-    // background-size: 992px 550px;
-    // width: 992px;
-    // height: 550px;//calc(710px * var(--ratio));     
-    @include standardBackgroundPic("../assets/images/textBg1.jpg");
+    width: 100%;
+    height: auto;
 }
 
 .section-label-left{
     color: $standard-text-color;
-    margin-top: 50px;
+    //margin-top: 50px;
 }
 
 .home-news{
     position: absolute; //so it needs this to stack up in a flex container rather than sit adjacent to sibling; for some reason the width is 0 without
+    width: 100%;
     z-index: 1;
 }
 

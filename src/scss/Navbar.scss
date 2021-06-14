@@ -11,7 +11,7 @@
 
 .nav-bar{
     width: $content-width-standard; //100% doesn't work, it starts the el where it's supposed to but it ends way the hell beyond the left edge of the screen...
-    height: $nav-height;
+    height: $nav-height;                        //it's because the backgrounds in the home route have a fixed width which persists as an el when they are cropped
     position: fixed;
     background-color: $main-bg-color;
     z-index: 2;
@@ -46,16 +46,34 @@
     display: flex;
     justify-content: space-between;
     position: absolute;
-    top: $nav-height - $nav-border-height;
+    top: $nav-height - 12px;//$nav-border-height;
     width: 100%;
 }
 
-.ornate-border{
+.ornate-border{ //not using?
     height: $nav-border-height;
 }
 
 @media screen and (max-width: $content-width-standard){
     .nav-bar{
         width: 100%;
+    }
+    .left-7, .right-1{
+        display: none;
+    }
+}
+@media screen and (max-width: 768px){
+    .left-6, .right-2{
+        display: none;
+    }
+}
+@media screen and (max-width: 640px){
+    .left-5, .right-3{
+        display: none;
+    }
+}
+@media screen and (max-width: 576px){
+    .left-4, .right-4{
+        display: none;
     }
 }
