@@ -2,10 +2,12 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import * as actions from '../redux/actions';
 import logo from '../assets/images/logo2.png';
-import border from '../assets/images/fangs.png';
+import fangs from '../assets/images/fangs.png';
+import fangsLower from '../assets/images/fangsLower.png';
 import hamburger from '../assets/images/hamburger-stylized.png';
 import '../scss/Navbar.scss'; 
 
+//have flex-visible and block-visible classes
 class Navbar extends Component {
     constructor(){
         super();
@@ -15,16 +17,16 @@ class Navbar extends Component {
             goingUp: false
         }
         this.fangCount = [1, 2, 3, 4, 5, 6, 7, 8];
+        this.bottomFangCount = [1, 2, 3, 4, 5, 6, 7, 8, 9];
     }
 
     render() {
 
-        this.state.goingUp ?
+        this.state.goingUp ? //I should probably just use a damn IF statement at this point
             this.secondClass = "going-up"
         :
             this.secondClass = "going-down"
 
-        // THESE STAY OPEN AFTER WIDTH ENLARGED WITHOUT CLICKING THE MENU!!!
         this.props.menuVisible ? 
             this.menuVisibility = " menu-visible" //mind the space
         :
@@ -34,6 +36,17 @@ class Navbar extends Component {
             this.navItemVisibility = "nav-item-visible"// NO SPACE
         :
             this.navItemVisibility= ""
+
+        this.props.menuVisible ? 
+            this.invisibilityClass = " "
+        :
+            this.invisibilityClass = " display-none"
+
+        this.props.menuVisible ? 
+            this.animationDirectionClass = " menu-down"
+        :
+            this.animationDirectionClass = " menu-up"
+
         return (
             <div className={"nav-bar " + this.secondClass}>
 
@@ -42,11 +55,18 @@ class Navbar extends Component {
                     alt="hamburger"
                     onClick={() => {
                         this.props.handleMenuClick(!this.props.menuVisible);
-                        this.switchNavItemOrder(this.props.menuVisible)
+                        //this.switchNavItemOrder(this.props.menuVisible)
                     }}
                 />
 
-                <div className={"nav-items" + this.menuVisibility}>
+                <a href="/"> 
+                    <img className="nav-logo" // #######     LOGO      #########
+                        src={logo}
+                        alt="logo"
+                    />
+                </a>
+
+                <div className={"nav-items" + this.menuVisibility + this.animationDirectionClass}>
 
                     <a className="nav-item"
                         id={this.navItemVisibility + "_1"} //no spaces, ids can't have multiple, well, ids
@@ -61,14 +81,7 @@ class Navbar extends Component {
                     >
                         Albums
                     </a>
-
-                    <a href="/"> {/* ##########    LOGO    #########*/}
-                        <img className="nav-logo"
-                            src={logo}
-                            alt="logo"
-                        />
-                    </a>
-
+                
                     <a className="nav-item"
                         id={this.navItemVisibility + "_3"}
                         href="/media"
@@ -82,14 +95,30 @@ class Navbar extends Component {
                     >
                         Contact
                     </a>
+
+                    {/* BOTTOM FANGS FOR RETRACTABLE MENU */}
+                    <div className={"lower-fang-border-wrapper" + this.invisibilityClass}> {/* the imvisibility class may not work with the animated transition, may be instant */}
+                        <div className="nav-half-border"> {/* make component */}
+                            {
+                                this.bottomFangCount.map((each, index) => 
+                                    <img className="ornate-border"
+                                        src={fangsLower}
+                                        alt="border"
+                                        key={index}
+                                    />
+                                )
+                            }
+                        </div>
+                    </div>
+
                 </div>
 
                 <div className="nav-border-wrapper">
-                    <div className="nav-half-border">
+                    <div className="nav-half-border"> {/* make component */}
                         {
                             this.fangCount.map((each, index) => 
                                 <img className={"ornate-border left-" + index}
-                                    src={border}
+                                    src={fangs}
                                     alt="border"
                                     key={index}
                                 />
@@ -101,7 +130,7 @@ class Navbar extends Component {
                         {
                             this.fangCount.map((each, index) => 
                                 <img className={"ornate-border right-" + index}
-                                    src={border}
+                                    src={fangs}
                                     alt="border"
                                     key={index}
                                 />
@@ -147,10 +176,9 @@ class Navbar extends Component {
             this.navItems.insertBefore(this.logo, this.navItems.firstChild);
         } else {
             this.navItems.insertBefore(this.logo, this.navItems.children[3]);
-            console.log("first child was the logo")
         }
-        console.log(this.navItems.firstChild)
-        console.log(this.navItems.children[1])
+        console.log(this.navItems.firstChild.className)
+        console.log(this.navItems.children[1].className + "####")
     }
 }
 

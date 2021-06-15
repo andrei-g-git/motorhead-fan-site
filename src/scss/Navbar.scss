@@ -1,4 +1,5 @@
 @import './Variables.scss';
+@import './Mixins.scss';
 
 @font-face{
     src: $stylizedFontSource;
@@ -18,36 +19,49 @@
 }
 
 .nav-items{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;    
+    @include centeredSpaceAround(); 
+    position: relative;
 }
+// .nav-items-half{
+//     @include centeredSpaceAround();
+// }
 .nav-item{
     font-family: $stylizedFont;
     text-decoration: none;
     color: $nav-link-color;
+}
+.in-nav-menu{
+    height: 200px;
+    flex-direction: column;
 }
 .hamburger-menu{
     display: none;
     position: absolute;
     margin: 15px;
     height: 50%;
+    z-index: 1;
 }
 .menu-visible{
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-between; //needs repeating, otherwise the logo offsets like 20px lower
     height: 600px;
-    border: 5px solid red;
+    background-color: $main-bg-color;
+
+    box-sizing: border-box; //to include upper padding
+    padding-top: 110px + 20px; //logo height + change
+    padding-bottom: 30px;
 }
-// .nav-item-visible{
-//     display: block;
-// }
 #nav-item-visible_1, #nav-item-visible_2, #nav-item-visible_3, #nav-item-visible_4 {
     display: block;
 }
 .nav-logo{
     width: 150px;
+    //when outside nav items
+    position: absolute;
+    top: 1px;
+    left: calc(50% - 150px/2);
+    z-index: 1;
 }
 
 .going-up{
@@ -67,11 +81,26 @@
     top: $nav-height - 12px;//$nav-border-height;
     width: 100%;
 }
-
-.ornate-border{ //not using?
+.lower-fang-border-wrapper{
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    bottom: -4px;
+}
+.ornate-border{ 
     height: $nav-border-height;
 }
-
+.menu-down{
+    transform: translateY(0);
+    transition: transform 0.5s ease-in-out;
+}
+.menu-up{
+    transform: translateY(-100%);
+    transition: transform 0.5s ease-in-out;
+}
+.display-none{
+    display: none;
+}
 @media screen and (max-width: $content-width-standard){
     .nav-bar{
         width: 100%;
@@ -99,5 +128,14 @@
     }
     .hamburger-menu{
         display: block;
+    }
+}
+
+@media screen and (min-width: 576px){
+    .menu-visible{
+        flex-direction: row;
+        height: 100%;
+        box-sizing: content-box;      
+        padding: 0;
     }
 }

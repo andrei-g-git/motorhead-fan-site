@@ -19,3 +19,9 @@
     width: $content-width-standard;
     height: calc(710px * var(--ratio));  
 }
+
+@mixin centeredSpaceAround(){
+    display: flex;
+    justify-content: space-around;
+    align-items: center;      
+}
