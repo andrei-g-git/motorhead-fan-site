@@ -26,6 +26,45 @@ function Media(props) {
                 visible={props.showModal}
             />
 
+            <div className="video-grid">
+                <iframe className="concert-video-media" 
+                    src="https://www.youtube.com/embed/3mbvWn1EY6g"
+                    // width="480"
+                    // height="270"
+                    title="motorhead-video-1"
+                />
+                <iframe className="concert-video-media" 
+                    src="https://www.youtube.com/embed/1M4FG1UXH5w"
+                    // width="480"
+                    // height="270"
+                    title="motorhead-video-2"
+                />
+                <iframe className="concert-video-media" 
+                    src="https://www.youtube.com/embed/0GI7LrSHYaU"
+                    // width="480"
+                    // height="270"
+                    title="motorhead-video-3"
+                />
+                <iframe className="concert-video-media" 
+                    src="https://www.youtube.com/embed/S_CXDdmu_ug"
+                    // width="480"
+                    // height="270"
+                    title="motorhead-video-4"
+                />
+                <iframe className="concert-video-media" 
+                    src="https://www.youtube.com/embed/CME5BP5fZg4"
+                    // width="480"
+                    // height="270"
+                    title="motorhead-video-5"
+                />
+                <iframe className="concert-video-media" 
+                    src="https://www.youtube.com/embed/d5F7uhCIBco"
+                    // width="480"
+                    // height="270"
+                    title="motorhead-video-6"
+                />  
+            </div>
+
             <div>
                 {
                     props.showModal ? 
