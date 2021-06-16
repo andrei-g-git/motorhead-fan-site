@@ -60,16 +60,18 @@
     z-index: 1;
 }
 
-.tours-home{
-    margin-top: 50px;
+.parallax-background-home-1{
+    @include parallaxBg("../assets/images/homeParallaxImage1.jpg");   
 }
 
-.concert-video-home{
-    //margin: 5px 0;
+.tours-home{
+    margin-top: 50px;
 }
 
 .tours-list{
     color: $standard-text-color;
 }
 
-
+.parallax-background-home-2{
+    @include parallaxBg("../assets/images/homeParallaxImage2.jpg");   
+}

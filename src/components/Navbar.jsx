@@ -65,7 +65,8 @@ class Navbar extends Component {
                         alt="logo"
                     />
                 </a>
-
+                
+                {/* <div className={"drop-menu-bg" + this.invisibilityClass}> */}
                 <div className={"nav-items" + this.menuVisibility + this.animationDirectionClass}>
 
                     <a className="nav-item"
@@ -112,6 +113,7 @@ class Navbar extends Component {
                     </div>
 
                 </div>
+                {/* </div> */}     
 
                 <div className="nav-border-wrapper">
                     <div className="nav-half-border"> {/* make component */}
@@ -137,7 +139,9 @@ class Navbar extends Component {
                             )
                         }                        
                     </div>
-                </div>                                                              
+                </div>  
+
+                {/* <div className={"test" + this.invisibilityClass} /> */}   {/* obscures too many nav elements, raising their z-index doesn't work */}                                                         
             </div>
         )
     }

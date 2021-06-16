@@ -17,14 +17,14 @@
     background-color: $main-bg-color;
     z-index: 2;
 }
-
+/* .drop-menu-bg{
+    @include modalBackground(); //not a modal but the css is relevant
+} */
 .nav-items{
     @include centeredSpaceAround(); 
     position: relative;
 }
-// .nav-items-half{
-//     @include centeredSpaceAround();
-// }
+
 .nav-item{
     font-family: $stylizedFont;
     text-decoration: none;
@@ -45,7 +45,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between; //needs repeating, otherwise the logo offsets like 20px lower
-    height: 600px;
+    height: $nav-menu-height;
     background-color: $main-bg-color;
 
     box-sizing: border-box; //to include upper padding
@@ -86,21 +86,34 @@
     justify-content: space-between;
     position: absolute;
     bottom: -4px;
+    //z-index: 3;
 }
 .ornate-border{ 
     height: $nav-border-height;
+    //z-index: 3;
 }
 .menu-down{
     transform: translateY(0);
-    transition: transform 0.5s ease-in-out;
+    transition: transform 0.5s ease-out;//ease-in-out;
 }
-.menu-up{
+.menu-up{ //the animation doesn't work
     transform: translateY(-100%);
-    transition: transform 0.5s ease-in-out;
+    transition: transform 0.5s ease-in;//ease-in-out;
 }
 .display-none{
     display: none;
 }
+
+.test{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.8);
+    //z-index: 999;         
+}
+
 @media screen and (max-width: $content-width-standard){
     .nav-bar{
         width: 100%;
@@ -137,5 +150,8 @@
         height: 100%;
         box-sizing: content-box;      
         padding: 0;
+    }
+    .nav-items{
+        transform: translateY(0);
     }
 }
