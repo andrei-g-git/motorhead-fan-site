@@ -1,0 +1,18 @@
+.footer{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 15px;
+}
+.social-media-links{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 240px;
+}
+.social-media-icon{
+    width: 48px;
+}
+.text-links{
+    display: flex;
+    flex-direction: column;
+}

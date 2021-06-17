@@ -1,5 +1,6 @@
 import React from 'react';
 import Navbar from './Navbar';
+import Footer from './Footer';
 import Home from '../routes/Home';
 import Media from '../routes/Media';
 import Albums from '../routes/Albums';
@@ -11,6 +12,7 @@ function Main(){
         <div className="main">
             <div className="main-container">
                 <Navbar />
+
                 <Switch>
                     <Route exact path="/">
                         <Home />
@@ -22,6 +24,8 @@ function Main(){
                         <Albums />
                     </Route>                    
                 </Switch>
+                
+                <Footer />
             </div>
         </div>
     )   
