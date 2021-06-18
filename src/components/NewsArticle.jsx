@@ -1,4 +1,6 @@
 import React from 'react';
+import spade from '../assets/images/spades2.png';
+import '../scss/NewsArticle.scss'
 
 function NewsArticle(props) {
     return (
@@ -12,11 +14,15 @@ function NewsArticle(props) {
                 src={props.image}
                 alt="header"
             />
-            <p className="article-content">
+            <pre className="article-content">
                 {
                     props.content
                 }
-            </p>
+            </pre>
+            <img className="spade-fin" 
+                src={spade}
+                alt="spade"
+            />
         </div>
     )
 }

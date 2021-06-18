@@ -1,5 +1,9 @@
 @import './Variables.scss';
 
+p, pre, h1, h2, h3, h4, h5, h6{
+    color: white;
+}
+
 .main{
     background-image: url('../assets/images/metal2.jpg');
     background-repeat: no-repeat;
