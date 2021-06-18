@@ -38,20 +38,71 @@ export const news = [
         image: `https://imotorhead.com/mh/wp-content/uploads/2021/04/Motorhead-No-Sleep-Til-Hammersmith-40th-Anniversary-Edition-768x512.jpg`
     },
     {
-        title: ``,
-        snippet: ``,
+        title: `THE LÖST TAPES`,
+        snippet: `Cassette tapes. Remember those?`,
         content: `
-        
+    Cassette tapes. Remember those?
+
+    Those things with the dual spools and loads of wide brown plastic recording string that’d occasionally unravel and hang out of the shell, requiring a pencil and firm wrist to spin back into place?
+    
+    Yeah, well, once upon a time, old-school sound systems contained cassette decks for the express purpose of recording shows, and these “cassette” things were a standard part of every tour.  Motörhead were certainly no exception, recording show after show. They contain gold, pure aural gold, and had for many years sat hundreds of feet underground in a small cave Lemmy owned, guarded by small, hairy centurions in Roman armor with small spears and bad attitudes. Only the magic password would release them, and thankfully, Lem had scribbled it down and left it inside an old sketch book for us (no, were won’t tell you the password, although it did have the words ’nie nie nie’  in it). There were loads of the dirty, dusty, greasy little buggers gathered, with the likes of Lyon, Liverpool, Hamburg and Chippenham (!!) scrawled in biro on the tiny labels alongside a date…and thus we are delighted to announce that this unique collection of live gems will now be heard by the world, via carefully digitized transfers, in a new series of predominantly digital releases titled The Löst Tapes. So here’s to The Löst Tapes…and we’d like to confirm, no diminutive Roman centurions were harmed in the procurement of these treasures!
+    
+    Volume one has been hand-picked by the increasingly deaf, but well-meaning (and hydrated!) Motörhead team, along with surviving members Phil Campbell and Mikkey Dee, and sees the trio in blistering form on the Sacrifice album tour recorded at the Sala Aqualung in Madrid Spain on 1st June 1995.        
+        `,
+        image: `https://imotorhead.com/mh/wp-content/uploads/2021/05/Moto%CC%88rhead_The-Lost-Tapes_V1-Madrid_SUPPLY-web.jpg`
+    },
+    {
+        title: `The Ultimate Motörhead ‘Ace Of Spades’ collectors box set`,
+        snippet: `We are proud to announce the ultimate Motörhead ‘Ace Of Spades’ collectors box set, plus deluxe 40th anniversary editions of Ace Of Spades will be released via BMG on 30th October 2020.`,
+        content: `
+    The Ultimate Motörhead ‘Ace Of Spades’ collectors box set
+
+    We are proud to announce the ultimate Motörhead ‘Ace Of Spades’ collectors box set, plus deluxe 40th anniversary editions of Ace Of Spades will be released via BMG on 30th October 2020. These releases feature a new master of the album from original tapes, two previously unheard concerts from ’81 and a horde of never before seen photos, memorabilia plus previously unpublished interviews by the people who were there. The deluxe box set contains 42 previously unreleased tracks and a DVD of rare TV appearances.
+    Pushing up the ante, you know you gotta see this!
+    Check out the unboxing of the spectacular Motörhead ‘Ace Of Spades’ 40th anniversary box set!     
+    
+    Ace Of Spades, the 1980, iconic, game changing album that altered the course of hard rock forever turns 40 this year. To celebrate, here’s a new video for a previously unreleased live version of the title track, recorded in Belfast in 1981.    
+        `,
+        image: `https://imotorhead.com/mh/wp-content/uploads/2020/07/box-set-image-for-imotorhead-scaled.jpg`
+    },    
+    {
+        title: `Crew Nation, Global Relief Fund, Road Crew Video Challenge`,
+        snippet: `Please use our universal crew anthem and pay tribute to these warriors of the road.`,
+        content: `
+    Please use our universal crew anthem and pay tribute to these warriors of the road.  
+    Crew Nation – Global Relief Fund – Road Crew Video Challenge
+
+    We hope you liked our new video for “(We Are) The Road Crew”.
+    
+    Now it’s your turn!
+    
+    Please use our universal crew anthem and pay tribute to these warriors of the road.  Available by clicking here.
+    
+    Whether you’re in a band or a fan, whether you’re in London, Los Angeles or Lagos, wherever you are and whoever you are create your own photo and video tributes, from 10 second homages to full-length productions, with “(We Are) The Road Crew” reminding everyone how amazing these unsung heroes are. Then share your tributes with the world via our social media Instagram, Facebook, Twitter and also your own outlets, in the process encouraging others to cut loose and do the same!
+    
+    Have fun, be loud and show road crews worldwide YOUR appreciation for all that they do! And remember, every time the song gets streamed for the next year, Live Nation’s Crew Nation charity receives the proceeds!          
         `,
         image: ``
     },
     {
-        title: ``,
-        snippet: ``,
+        title: `Rockhammer Motorhead Mayhem`,
+        snippet: `As Part of the 8th Of May Motorhead Celebrations Join Stevie J this Thursday 8-10pm bst 3-5pm edt for the Rockhammer Motorhead Mayhem.`,
         content: `
-        
+    As Part of the 8th Of May Motorhead Celebrations Join Stevie J this Thursday 8-10pm bst 3-5pm edt for the Rockhammer Motorhead Mayhem.
+
+    2 Hours of the very best  from all eras of Motorhead, and associated bands such as Phil Campbell & The Bastard Sons, Fastway, Hawkwind plus more.
+    
+    Rockhammer Motorhead Mayhem- Brining you more Motorhead music than any other show! Brought to you by Road Crew Beer, and only on MMH-The Home of Rock Radio.        
         `,
-        image: ``
+        image: `https://imotorhead.com/mh/wp-content/uploads/2020/05/ALL269469107788015-1311x1536.jpeg`
+    },
+    {
+        title: `40 year anniversary certificate awarded at Motörhead ’79 release party`,
+        snippet: `Los Angeles City Councilman Jose Huizar came down to the record release party and presented the band a 40 year anniversary certificate signed by all 15 City Council members and the mayor.`,
+        content: `
+    Los Angeles City Councilman Jose Huizar came down to the record release party and presented the band a 40 year anniversary certificate signed by all 15 City Council members and the mayor.        
+        `,
+        image: `https://imotorhead.com/mh/wp-content/uploads/2019/10/IMG_7127.jpeg`
     },    
     {
         title: ``,
@@ -60,23 +111,7 @@ export const news = [
         
         `,
         image: ``
-    },
-    {
-        title: ``,
-        snippet: ``,
-        content: `
-        
-        `,
-        image: ``
-    },
-    {
-        title: ``,
-        snippet: ``,
-        content: `
-        
-        `,
-        image: ``
-    },        
+    },    
     {
         title: `Lorem ipsum dolor`,
         snippet: `Sit amet consectetur adipisicing elit. Neque rem incidunt, a enim saepe doloribus consectetur aliquid`,

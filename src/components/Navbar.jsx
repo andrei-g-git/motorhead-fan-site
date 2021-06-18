@@ -14,7 +14,7 @@ class Navbar extends Component {
 
         this.state = {
             prevScrollY: 0, //should use a ref or something, re-rendering the whole thing every scrolled pixel is inefficient
-            goingUp: false
+            goingUp: true
         }
         this.fangCount = [1, 2, 3, 4, 5, 6, 7, 8];
         this.bottomFangCount = [1, 2, 3, 4, 5, 6, 7, 8, 9];

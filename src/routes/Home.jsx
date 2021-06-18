@@ -57,10 +57,10 @@ function Home() {
                         snippet={news[2].snippet}
                         index={2}
                     />
-                    <Headline title={news[3].title} 
+{/*                     <Headline title={news[3].title} //overflows into the image above if more than 3, now that I added dividers
                         snippet={news[3].snippet}
                         index={3}
-                    />                                                            
+                    />  */}                                                           
                 </div>
 
                 <PlayingCardDivider countArray={spadesCount}

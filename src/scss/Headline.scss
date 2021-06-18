@@ -5,7 +5,7 @@
 }
 
 .headline{ 
-    color: $standard-text-color;
+    color: $standard-text-color;  
 }
 
 .snippet{ 
@@ -13,7 +13,9 @@
     white-space: nowrap;
     text-overflow: ellipsis;    
 }
-
+.headline-divider{
+    margin-left: 25%;
+}
 @media screen and (max-width: 576px){
     .headline-container{
         margin-top: 3px;

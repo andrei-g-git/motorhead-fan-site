@@ -1,6 +1,7 @@
 import React from 'react';
 import ReadMore from './ReadMore';
 import { formatWithHyphen } from '../js/format';
+import divider from '../assets/images/divider1.png';
 import '../scss/Headline.scss';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -18,7 +19,11 @@ function Headline(props) {
                         {
                             props.snippet
                         }
-                    </p>
+                    </p>        
+                    <img className="headline-divider" 
+                        src={divider}
+                        alt="divider"
+                    />
                 </section>
                 <div className="read-more col-sm-2">
                     <a href={"/news/" + formatWithHyphen(props.title)} >
