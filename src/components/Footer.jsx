@@ -30,9 +30,21 @@ function Footer() {
                     </a>                                        
                 </div>
                 <div className="text-links">
-                    <a href="/contact">Contact</a>
-                    <a href="/about">About</a>
-                    <a href="/whatever">Something</a>                            
+                    <a className="text-link" 
+                        href="/contact"
+                    >
+                        Contact
+                    </a>
+                    <a className="text-link" 
+                        href="/about"
+                    >
+                        About
+                    </a>
+                    <a className="text-link" 
+                        href="/whatever"
+                    >
+                        Something
+                    </a>                            
 
                 </div>
 {/*             </div> */}

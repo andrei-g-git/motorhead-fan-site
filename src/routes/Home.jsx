@@ -1,14 +1,22 @@
 import React from 'react';
 import Headline from '../components/Headline';
+import PlayingCardDivider from '../components/PlayingCardDivider';
 import { news } from '../data/News';
 import { tours } from '../data/Tours';
 import { interviews } from '../data/Interviews';
 import headerImage from '../assets/images/home-header-small.png';
 import listBg1 from '../assets/images/textBg1.jpg';
 import listBg2 from '../assets/images/textBg2.jpg';
+import spadeSmall from '../assets/images/spades2-small.png';
+import heartSmall from '../assets/images/heart1-small.png';
+import clubSmall from '../assets/images/clubs2-small.png';
+import diamondSmall from '../assets/images/diamonds1-small.png';
 import '../scss/Home.scss';
 
 function Home() {
+
+    const spadesCount = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33];
+
     return (
         <div className="home-container">
             <div className="text-over-bg">
@@ -18,7 +26,18 @@ function Home() {
                 />
                 <div className="home-header-text">
                     If you think you're too old for rock'n'roll, then you are!    
-                </div>             
+                </div>   
+
+                <div className="playing-card-divider-bottom">
+                    {
+                        spadesCount.map((item, index) => 
+                            <img className="playing-card" 
+                                src={spadeSmall}
+                                alt="spade"
+                            />                        
+                        )
+                    }
+                </div>
             </div>
 
             <div className="text-over-bg"> {/* these should definitely be components */}
@@ -45,6 +64,11 @@ function Home() {
                         snippet={news[3].snippet}
                     />                                                            
                 </div>
+
+                <PlayingCardDivider countArray={spadesCount}
+                    src={heartSmall}
+                    dividerClass="playing-card-divider-bottom"
+                />
             </div>
 
             <div className="parallax-background-home-1" />
@@ -73,6 +97,12 @@ function Home() {
             <div className="parallax-background-home-2" />
 
             <div className="text-over-bg"> {/* these should definitely be components */}
+
+                <PlayingCardDivider countArray={spadesCount}
+                    src={clubSmall}
+                    dividerClass=" playing-card-divider-top"
+                />
+
                 <img className="secondary-backgrounds-home"
                     src={listBg2}
                     alt="text-bg"
