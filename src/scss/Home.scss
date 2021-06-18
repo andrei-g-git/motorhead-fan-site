@@ -8,7 +8,6 @@
 
 .home-container{
     padding-top: $nav-height;
-    //height: 3000px; //testing, delete
 }
 
 .text-over-bg{
@@ -28,12 +27,6 @@
     z-index: 1; //can't be on same level with bg, flex would display them next to one another
 }
 
-// .playing-card-divider{
-//     display: flex;
-//     justify-content: center;
-//     position: absolute;
-//     z-index: 2;
-// }
 .playing-card-divider-bottom{
     @include playingCardDivider();
     bottom: -3%;

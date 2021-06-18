@@ -22,7 +22,8 @@
 } */
 .nav-items{
     @include centeredSpaceAround(); 
-    position: relative;
+    //position: relative;
+    height: 100%;
 }
 
 .nav-item{

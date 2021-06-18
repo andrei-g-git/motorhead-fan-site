@@ -1,5 +1,6 @@
 import React from 'react';
 import ReadMore from './ReadMore';
+import { formatWithHyphen } from '../js/format';
 import '../scss/Headline.scss';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -20,9 +21,11 @@ function Headline(props) {
                     </p>
                 </section>
                 <div className="read-more col-sm-2">
-                    <input type="button" //should be image
-                        value="Read more"
-                    />
+                    <a href={"/news/" + formatWithHyphen(props.title)} >
+                        <input type="button" //should be image
+                            value="Read more"
+                        />
+                    </a>
                 </div>               
             </div>                         
 

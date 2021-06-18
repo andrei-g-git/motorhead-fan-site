@@ -28,19 +28,13 @@ function Home() {
                     If you think you're too old for rock'n'roll, then you are!    
                 </div>   
 
-                <div className="playing-card-divider-bottom">
-                    {
-                        spadesCount.map((item, index) => 
-                            <img className="playing-card" 
-                                src={spadeSmall}
-                                alt="spade"
-                            />                        
-                        )
-                    }
-                </div>
+                <PlayingCardDivider countArray={spadesCount}
+                    src={spadeSmall}
+                    dividerClass="playing-card-divider-bottom"
+                />
             </div>
 
-            <div className="text-over-bg"> {/* these should definitely be components */}
+            <div className="text-over-bg"> 
 
                 <img className="secondary-backgrounds-home"
                     src={listBg1}
@@ -53,15 +47,19 @@ function Home() {
                     </label>
                     <Headline title={news[0].title} 
                         snippet={news[0].snippet}
+                        index={0}
                     />
                     <Headline title={news[1].title} 
                         snippet={news[1].snippet}
+                        index={1}
                     />
                     <Headline title={news[2].title} 
                         snippet={news[2].snippet}
+                        index={2}
                     />
                     <Headline title={news[3].title} 
                         snippet={news[3].snippet}
+                        index={3}
                     />                                                            
                 </div>
 
@@ -96,7 +94,7 @@ function Home() {
 
             <div className="parallax-background-home-2" />
 
-            <div className="text-over-bg"> {/* these should definitely be components */}
+            <div className="text-over-bg"> 
 
                 <PlayingCardDivider countArray={spadesCount}
                     src={clubSmall}
@@ -114,12 +112,15 @@ function Home() {
                 </label>                    
                     <Headline title={interviews[0].title} 
                         snippet={interviews[0].snippet}
+                        index={0}
                     />
                     <Headline title={interviews[1].title} 
                         snippet={interviews[1].snippet}
+                        index={1}
                     />
                     <Headline title={interviews[2].title} 
                         snippet={interviews[2].snippet}
+                        index={2}
                     />                                                          
                 </div>
             </div>

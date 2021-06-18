@@ -172,6 +172,7 @@ class Navbar extends Component {
         console.log("going up     " + this.state.goingUp); //this isn't in real time, setState is async       
     }   
     
+    //don't need anymore
     switchNavItemOrder = (menuVisible) => { //is the menuVisible state ASYNC???
         this.actualMenuVisibleBecauseTheStateHasntYetChanged = !menuVisible;
         this.navItems = document.getElementsByClassName("nav-items")[0]; 
