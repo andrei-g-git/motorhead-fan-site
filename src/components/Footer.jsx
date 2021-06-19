@@ -10,19 +10,19 @@ function Footer() {
         <div className="footer">{/* "container footer"> */}
 {/*             <div className="row"> */}
                 <div className="social-media-links">{/*  col-sm-6"> */}
-                    <a href="">
+                    <a href="https://duckduckgo.com">
                         <img className="social-media-icon" 
                             src={twitter}
                             alt="social-media"
                         />
                     </a>                                     
-                    <a href="">
+                    <a href="https://duckduckgo.com">
                         <img className="social-media-icon" 
                             src={facebook}
                             alt="social-media"
                         />
                     </a>
-                    <a href="">
+                    <a href="https://duckduckgo.com">
                         <img className="social-media-icon" 
                             src={instagram}
                             alt="social-media"
