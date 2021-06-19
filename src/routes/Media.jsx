@@ -2,7 +2,7 @@ import React from 'react';
 import PicCard from '../components/PicCard';
 import PicModal from '../components/PicModal';
 import * as media from '../data/MediaPicCards';
-import * as actions from '../redux/actions';
+//import * as actions from '../redux/actions';
 import { connect } from 'react-redux';
 import '../scss/Media.scss';
 

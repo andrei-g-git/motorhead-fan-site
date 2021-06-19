@@ -1,5 +1,4 @@
 import React from 'react';
-import ReadMore from './ReadMore';
 import { formatWithHyphen } from '../js/format';
 import divider from '../assets/images/divider1.png';
 import '../scss/Headline.scss';

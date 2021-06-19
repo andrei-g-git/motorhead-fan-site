@@ -10,7 +10,7 @@ import listBg2 from '../assets/images/textBg2.jpg';
 import spadeSmall from '../assets/images/spades2-small.png';
 import heartSmall from '../assets/images/heart1-small.png';
 import clubSmall from '../assets/images/clubs2-small.png';
-import diamondSmall from '../assets/images/diamonds1-small.png';
+//import diamondSmall from '../assets/images/diamonds1-small.png';
 import '../scss/Home.scss';
 
 function Home() {
