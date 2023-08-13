@@ -1,6 +1,6 @@
 ---
 title: "THE LÖST TAPES"
-snippet: "Cassette tapes. Remember those?"
+subtitle: "Cassette tapes. Remember those?"
 ---
 
 Cassette tapes. Remember those?
