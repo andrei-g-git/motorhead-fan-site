@@ -9,7 +9,7 @@ export const getMarkdownData = (directory: ContentPath, slug: string) => {
     return data;  
 }
 
-export const getArticleMetadata = (directory: ContentPath, slug: string) => {
+export const getArticleMetadata = (directory: ContentPath, slug: string): {title: string, subtitle: string} => {
     const grayMatter = getMarkdownData(directory, slug);
     return{
         title: grayMatter.data.title,
