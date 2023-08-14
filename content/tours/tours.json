@@ -1,0 +1,67 @@
+[
+    {
+        "date": "17 Nov 2015",
+        "place": "Electric Halle",
+        "city": "Düsseldorf"
+    },
+    {
+        "date": "18 Nov 2015",
+        "place": "Saarlandhalle",
+        "city": "Saarbrücken"
+    },
+    {
+        "date": "20 Nov 2015",
+        "place": "Zenith",
+        "city": "Munich"
+    },
+    {
+        "date": "21 Nov 2015",
+        "place": "Zenith",
+        "city": "Munich"
+    },
+    {
+        "date": "24 Nov 2015",
+        "place": "Jahrhunderthalle",
+        "city": "Frankfurt"
+    },
+    {
+        "date": "25 Nov 2015",
+        "place": "Arena",
+        "city": "Ludwigsburg"
+    },
+    {
+        "date": "30 Nov 2015",
+        "place": "Scandinavian Congress",   
+        "city": "Århus"
+    },
+    {
+        "date": "01 Dec 2015",
+        "place": "Scandinavium",
+        "city": "Goteborg"
+    },
+    {
+        "date": "03 Dec 2015",
+        "place": "Oslo Spektrum",
+        "city": "Oslo"
+    },
+    {
+        "date": "04 Dec 2015",
+        "place": "Hovet",
+        "city": "Stockholm"
+    },
+    {
+        "date": "06 Dec 2015",
+        "place": "Hartwall Arena",
+        "city": "Helsinki"
+    },
+    {
+        "date": "09 Dec 2015",
+        "place": "Sporthalle",
+        "city": "Hamburg"
+    },
+    {
+        "date": "11 Dec 2015",
+        "place": "Max-Schmeling-Halle",
+        "city": "Berlin"
+    }
+]

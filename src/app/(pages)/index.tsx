@@ -3,6 +3,8 @@ import fs from "fs";
 import Link from 'next/link';
 import { NewsPreview, ReadMore, withLink } from '@/components';
 import { getArticleMetadata } from '../lib';
+import path from 'path';
+import ToursPreview from '@/components/tours/ToursPreview';
 
 const Homeee = (/* {slugs}: {slugs: string[]} */) => {
     const slugs = getNewsMetadata();
@@ -15,6 +17,9 @@ const Homeee = (/* {slugs}: {slugs: string[]} */) => {
             subtitle: data.subtitle
         }
     });
+
+    const toursRaw = fs.readFileSync(path.join("content/tours", "tours.json"), "utf8")
+    const tours = JSON.parse(toursRaw)
 
     return (
         <div>
@@ -29,6 +34,8 @@ const Homeee = (/* {slugs}: {slugs: string[]} */) => {
                     />
                 )
             }
+
+            <ToursPreview tours={tours} />
         </div>
     )
 }

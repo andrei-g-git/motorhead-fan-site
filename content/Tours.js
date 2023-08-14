@@ -13,3 +13,7 @@ export const tours = [ //should have article content and 'read more' button
     "09 Dec 2015  -  Sporthalle,	               Hamburg",
     "11 Dec 2015  -  Max-Schmeling-Halle,	       Berlin"
 ]
+
+
+
+
