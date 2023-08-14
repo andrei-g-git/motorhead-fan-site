@@ -4,8 +4,6 @@ import Link from 'next/link';
 
 const Homeee = (/* {slugs}: {slugs: string[]} */) => {
     const contentMetadata = getNewsMetadata();
-    console.log("logging")
-    console.log("content metadata:", contentMetadata)
     return (
         <div>
             "homeeeeee"

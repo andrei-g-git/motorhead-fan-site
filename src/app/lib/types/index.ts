@@ -1,4 +1,4 @@
 export type { 
-    PagePath,
+    ContentPath,
     Params
 } from "./routing";

@@ -1,4 +1,10 @@
 export {
     grabStaticPaths,
-    grabStaticProps
+    grabStaticProps,
 } from "./routing";
+
+export {
+    getArticleMetadata,
+    getArticleContent,
+    getMarkdownData
+} from "./markdown";
