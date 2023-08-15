@@ -4,3 +4,9 @@ export type {
 } from "./routing";
 
 export type {Tours} from "./content";
+
+export type{
+    EndsWith,
+    StartsWith,
+    PictureFile
+} from "./formats";

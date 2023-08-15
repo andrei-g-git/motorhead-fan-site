@@ -3,3 +3,4 @@ export type Tours = {
     place: string,
     city: string
 }[]
+

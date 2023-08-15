@@ -5,6 +5,9 @@ import { ArticlePreview, ReadMore, withLink } from '@/components';
 import { getArticleMetadata } from '../lib';
 import path from 'path';
 import ToursPreview from '@/components/tours/ToursPreview';
+import * as Styled from "./styles";
+
+
 
 const Homeee = (/* {slugs}: {slugs: string[]} */) => {
     let slugs = getNewsMetadata();
@@ -32,7 +35,7 @@ const Homeee = (/* {slugs}: {slugs: string[]} */) => {
     const tours = JSON.parse(toursRaw)
 
     return (
-        <div>
+        <Styled.Main backgroundimage={"/images/home-parallax-image-1.jpg"}>
             "homeeeeee"
             {
                 allArticleMetadata.map(item =>
@@ -58,7 +61,7 @@ const Homeee = (/* {slugs}: {slugs: string[]} */) => {
                 )                
             }
 
-        </div>
+        </Styled.Main>
     )
 }
 
