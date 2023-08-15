@@ -1,11 +1,11 @@
-type NewsPreviewProps = {
+type ArticlePreviewProps = {
     title: string,
     subtitle: string,
     link: string,
     RedirectButton: React.FunctionComponent<any>
 }
 
-const NewsPreview = ({title, subtitle, link, RedirectButton}: NewsPreviewProps) => {
+const ArticlePreview = ({title, subtitle, link, RedirectButton}: ArticlePreviewProps) => {
     return (
         <div>
             <h2>{title}</h2>
@@ -15,4 +15,4 @@ const NewsPreview = ({title, subtitle, link, RedirectButton}: NewsPreviewProps) 
     )
 }
 
-export default NewsPreview;
+export default ArticlePreview;

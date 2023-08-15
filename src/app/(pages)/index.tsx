@@ -1,18 +1,28 @@
 import React from 'react'
 import fs from "fs";
 import Link from 'next/link';
-import { NewsPreview, ReadMore, withLink } from '@/components';
+import { ArticlePreview, ReadMore, withLink } from '@/components';
 import { getArticleMetadata } from '../lib';
 import path from 'path';
 import ToursPreview from '@/components/tours/ToursPreview';
 
 const Homeee = (/* {slugs}: {slugs: string[]} */) => {
-    const slugs = getNewsMetadata();
-    const allMetadata = slugs.map(slug => {
+    let slugs = getNewsMetadata();
+    const allArticleMetadata = slugs.map(slug => {
         const data = getArticleMetadata("content/news", slug);
         return {
             slug: slug,
             //{...data}   why doesn't this work?
+            title: data.title,
+            subtitle: data.subtitle
+        }
+    });
+
+    slugs = getInterviewSlugs();
+    const allInterviewMetadata = slugs.map(slug => {
+        const data = getArticleMetadata("content/interviews", slug);
+        return {
+            slug: slug,
             title: data.title,
             subtitle: data.subtitle
         }
@@ -25,17 +35,29 @@ const Homeee = (/* {slugs}: {slugs: string[]} */) => {
         <div>
             "homeeeeee"
             {
-                allMetadata.map(item =>
+                allArticleMetadata.map(item =>
 
-                    <NewsPreview title={item.title}
+                    <ArticlePreview title={item.title}
                         subtitle={item.subtitle}
                         link={`/news/${item.slug}`}
                         RedirectButton={withLink(ReadMore)}
                     />
                 )
             }
-
+            -----------------------------
             <ToursPreview tours={tours} />
+            ----------------------------
+            {
+                allInterviewMetadata.map(item =>
+
+                    <ArticlePreview title={item.title}
+                        subtitle={item.subtitle}
+                        link={`/interviews/${item.slug}`}
+                        RedirectButton={withLink(ReadMore)}
+                    />
+                )                
+            }
+
         </div>
     )
 }
@@ -50,6 +72,10 @@ export const getNewsMetadata = () => {
     // }
 }
 
+export const getInterviewSlugs = () => {
+    const files = fs.readdirSync("content/interviews");
+    return files.map(fileName => fileName.replace(".md", ""))
+}
 
 // const getContentMetadata = () => {
 //     const files = fs.readdirSync("content/news");
