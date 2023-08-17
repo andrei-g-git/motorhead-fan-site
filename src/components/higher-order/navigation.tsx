@@ -9,3 +9,4 @@ export const withLink = (WrappedComponent: React.FunctionComponent<any>) =>
             </Link>
         )
     }
+

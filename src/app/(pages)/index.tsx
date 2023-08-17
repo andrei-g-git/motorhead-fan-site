@@ -1,3 +1,5 @@
+"use client"
+
 import React from 'react'
 import fs from "fs";
 import Link from 'next/link';
@@ -6,7 +8,8 @@ import { getArticleMetadata } from '../lib';
 import path from 'path';
 import ToursPreview from '@/components/tours/ToursPreview';
 import * as Styled from "./styles";
-
+import {LandingView} from '@/components';
+import { withScrolling } from '@/components/higher-order/input';
 
 
 const Homeee = (/* {slugs}: {slugs: string[]} */) => {
@@ -34,34 +37,37 @@ const Homeee = (/* {slugs}: {slugs: string[]} */) => {
     const toursRaw = fs.readFileSync(path.join("content/tours", "tours.json"), "utf8")
     const tours = JSON.parse(toursRaw)
 
+    const Landing = withScrolling(LandingView);
+
     return (
-        <Styled.Main backgroundimage={"/images/home-parallax-image-1.jpg"}>
-            "homeeeeee"
-            {
-                allArticleMetadata.map(item =>
+        <Landing />
+        // <Styled.Main backgroundimage={"/images/home-parallax-image-1.jpg"}>
+        //     "homeeeeee"
+        //     {
+        //         allArticleMetadata.map(item =>
 
-                    <ArticlePreview title={item.title}
-                        subtitle={item.subtitle}
-                        link={`/news/${item.slug}`}
-                        RedirectButton={withLink(ReadMore)}
-                    />
-                )
-            }
-            -----------------------------
-            <ToursPreview tours={tours} />
-            ----------------------------
-            {
-                allInterviewMetadata.map(item =>
+        //             <ArticlePreview title={item.title}
+        //                 subtitle={item.subtitle}
+        //                 link={`/news/${item.slug}`}
+        //                 RedirectButton={withLink(ReadMore)}
+        //             />
+        //         )
+        //     }
+        //     -----------------------------
+        //     <ToursPreview tours={tours} />
+        //     ----------------------------
+        //     {
+        //         allInterviewMetadata.map(item =>
 
-                    <ArticlePreview title={item.title}
-                        subtitle={item.subtitle}
-                        link={`/interviews/${item.slug}`}
-                        RedirectButton={withLink(ReadMore)}
-                    />
-                )                
-            }
+        //             <ArticlePreview title={item.title}
+        //                 subtitle={item.subtitle}
+        //                 link={`/interviews/${item.slug}`}
+        //                 RedirectButton={withLink(ReadMore)}
+        //             />
+        //         )                
+        //     }
 
-        </Styled.Main>
+        // </Styled.Main>
     )
 }
 
