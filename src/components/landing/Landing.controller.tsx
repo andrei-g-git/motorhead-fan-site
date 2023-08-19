@@ -1,15 +1,17 @@
-"use client"
+// import { Dispatch, MutableRefObject, SetStateAction, useState } from "react";
+// import { ParallaxProvider } from "react-scroll-parallax";
 
-import { useScroll } from "@/components";
+const LandingController = ({View}: {View: React.FunctionComponent<any>}) => {
+    //const [viewRef, setViewRef] = useState(null)
 
-const LandingController = ({children}: {children: JSX.Element | React.ReactNode}) => {
-    const position = useScroll();
-    const bottomBgPos = getParallaxScroll(position, 2);
-    const upperBgPos = getParallaxScroll(position, 1);
+    return (<></>
+            //<View sendRef={getViewRef(setViewRef)} />
+    )
 }
 
-const getParallaxScroll = (position: number, multiplier: number) => {
-    return position * multiplier;
-}
+// const getViewRef = (setViewRef: Function) => 
+//     (ref: MutableRefObject<any> | null) => {
+//         setViewRef(ref)
+//     }
 
 export default LandingController;

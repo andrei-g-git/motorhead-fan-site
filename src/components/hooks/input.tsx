@@ -1,22 +1,20 @@
 "use-client"
+import {useScroll, useTransform} from "framer-motion";
+import { EndsWith } from "@/app/lib/types";
 
-import { Dispatch, SetStateAction, useEffect, useState } from "react"
 
-export const useScroll = () => {
-    const [position, setPosition] = useState(0);
+export const useVerticalParallax = (ref: any, ...scrollFactors: EndsWith<"%">[]) => {
+    const {scrollYProgress} = useScroll({
+        target: ref,
+        offset: ["start start", "end start"]        
+    });
 
-    useEffect(() => {
-        window.addEventListener('scroll', handleScroll(setPosition), { passive: true });
-
-        return () => {
-            window.removeEventListener("scroll", handleScroll(setPosition));
-        }
-    }, [])
-
-    return position;
+    return scrollFactors.map((factor: EndsWith<"%">) => {
+        return useTransform(
+            scrollYProgress,
+            [0, 1],
+            ["0%", `${factor}%`]
+        )
+    });
 }
 
-const handleScroll = (setPosition: Dispatch<SetStateAction<number>>) => 
-    () => {
-        setPosition(window.scrollY);
-    }

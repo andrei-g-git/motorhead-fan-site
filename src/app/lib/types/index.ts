@@ -10,3 +10,5 @@ export type{
     StartsWith,
     PictureFile
 } from "./formats";
+
+export type {FramerMotionScrollRange} from "./math";

@@ -8,3 +8,5 @@ export {
     getArticleContent,
     getMarkdownData
 } from "./markdown";
+
+export {isNumeric} from "./utils"

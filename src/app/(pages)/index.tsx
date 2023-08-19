@@ -1,16 +1,22 @@
-"use client"
+//"use client"
 
 import React from 'react'
 import fs from "fs";
 import Link from 'next/link';
-import { ArticlePreview, ReadMore, withLink } from '@/components';
+import { ArticlePreview, LandingParallaxBg, ReadMore, withLink/* , withParallax */ } from '@/components';
 import { getArticleMetadata } from '../lib';
 import path from 'path';
 import ToursPreview from '@/components/tours/ToursPreview';
 import * as Styled from "./styles";
-import {LandingView} from '@/components';
-import { withScrolling } from '@/components/higher-order/input';
+//import {LandingView} from '@/components';
+//import { withScrolling } from '@/components/higher-order/input';
+//import LandingController from '@/components/landing/Landing.controller';
+//import TestWrapper from '@/components/TestWrapper';
 
+import TestLandingWrapper from '@/components/landing/TestLandingWrapper';
+import TestLanding from '@/components/landing/TestLanding';
+//import {LandingParallaxBg} from '@/components';
+//import LandingController from '@/components/landing/LandingParallaxBg';
 
 const Homeee = (/* {slugs}: {slugs: string[]} */) => {
     let slugs = getNewsMetadata();
@@ -37,10 +43,19 @@ const Homeee = (/* {slugs}: {slugs: string[]} */) => {
     const toursRaw = fs.readFileSync(path.join("content/tours", "tours.json"), "utf8")
     const tours = JSON.parse(toursRaw)
 
-    const Landing = withScrolling(LandingView);
+    //const Landing = withSParallax(LandingView);
 
     return (
-        <Landing />
+        <div>
+            {/* <Landing /> */}   
+            {/* <TestWrapper /> */}
+            {/* <TestLandingWrapper /> */}
+            {/* <TestLanding /> */}
+            <LandingParallaxBg />
+            
+            <div></div>
+        </div>
+        
         // <Styled.Main backgroundimage={"/images/home-parallax-image-1.jpg"}>
         //     "homeeeeee"
         //     {
@@ -103,3 +118,11 @@ export const getInterviewSlugs = () => {
 // }
 
 export default Homeee;
+
+
+
+
+
+
+
+

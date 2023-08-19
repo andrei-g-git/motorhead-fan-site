@@ -1,4 +1,4 @@
-"use client"
+//"use client"
 import styled from "styled-components";
 import React from "react";
 import { PictureFile } from "../lib/types";
