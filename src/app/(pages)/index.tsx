@@ -3,20 +3,17 @@
 import React from 'react'
 import fs from "fs";
 import Link from 'next/link';
-import { ArticlePreview, LandingParallaxBg, ReadMore, withLink/* , withParallax */ } from '@/components';
+import { ArticlePreview, ReadMore, withLink/* , withParallax */ } from '@/components';
 import { getArticleMetadata } from '../lib';
 import path from 'path';
 import ToursPreview from '@/components/tours/ToursPreview';
 import * as Styled from "./styles";
-//import {LandingView} from '@/components';
-//import { withScrolling } from '@/components/higher-order/input';
-//import LandingController from '@/components/landing/Landing.controller';
-//import TestWrapper from '@/components/TestWrapper';
+import LandingParallaxBg from '@/components/landing/LandingParallaxBg';
 
-import TestLandingWrapper from '@/components/landing/TestLandingWrapper';
+
 import TestLanding from '@/components/landing/TestLanding';
-//import {LandingParallaxBg} from '@/components';
-//import LandingController from '@/components/landing/LandingParallaxBg';
+
+
 
 const Homeee = (/* {slugs}: {slugs: string[]} */) => {
     let slugs = getNewsMetadata();
@@ -46,43 +43,18 @@ const Homeee = (/* {slugs}: {slugs: string[]} */) => {
     //const Landing = withSParallax(LandingView);
 
     return (
-        <div>
-            {/* <Landing /> */}   
-            {/* <TestWrapper /> */}
-            {/* <TestLandingWrapper /> */}
-            {/* <TestLanding /> */}
+        <div> 
             <LandingParallaxBg />
             
-            <div></div>
+            <div style={{
+                width: "100%",
+                height: "1600px",
+                backgroundColor: "green"
+            }}>
+
+            </div>
         </div>
-        
-        // <Styled.Main backgroundimage={"/images/home-parallax-image-1.jpg"}>
-        //     "homeeeeee"
-        //     {
-        //         allArticleMetadata.map(item =>
 
-        //             <ArticlePreview title={item.title}
-        //                 subtitle={item.subtitle}
-        //                 link={`/news/${item.slug}`}
-        //                 RedirectButton={withLink(ReadMore)}
-        //             />
-        //         )
-        //     }
-        //     -----------------------------
-        //     <ToursPreview tours={tours} />
-        //     ----------------------------
-        //     {
-        //         allInterviewMetadata.map(item =>
-
-        //             <ArticlePreview title={item.title}
-        //                 subtitle={item.subtitle}
-        //                 link={`/interviews/${item.slug}`}
-        //                 RedirectButton={withLink(ReadMore)}
-        //             />
-        //         )                
-        //     }
-
-        // </Styled.Main>
     )
 }
 

@@ -1,47 +1,59 @@
 "use client"
 import {motion, useScroll, useTransform} from "framer-motion";
-//import { useVerticalParallax } from "@/components";
 import { useRef } from "react";
+import "./test.css"
+
+import * as Styled from "./styles";
 
 const LandingParallaxBg = () => {
     const ref = useRef(null);
-    //const progressions = useVerticalParallax(ref, "200%", "100%");
+    //const progressions = useVerticalParallax(ref, "50%");
     const {scrollYProgress} = useScroll({
         target: ref,
         offset: ["start start", "end start"]
     })
 
-    const bg1 = useTransform(scrollYProgress, [0,1], ["0%", "200%"])
-    const bg2 = useTransform(scrollYProgress, [0,1], ["0%", "100%"])
+    const bg1 = useTransform(scrollYProgress, [0,1], ["0%", "50%"])
+
+    // console.log(bg1)
+    // console.log(progressions)    //same result and yet the first element doesn't work...
 
     return (
-        <div className="w-full h-screen overflow-hidden relative grid place-items-center"
-            ref={ref}
-        >
+        // <div //className="w-full overflow-hidden relative grid place-items-center"
+        //     className="test"
+        //     style={{
+        //         width: "100%",
+        //         overflowX: "hidden",
+        //         position: "relative",
+        //     }}
+        //     ref={ref}
+        // >
+        <Styled.Main ref={ref}>
+
+
             <motion.div className="absolute inset-0 z-0"
                 style={{
                     backgroundImage: `url(/images/sky.png)`,
-                    backgroundPosition: "bottom",
+                    backgroundPosition: "top",
                     backgroundSize: "cover",
                     y: bg1
-                    //y: progressions[0]
                 }}
             >
 
             </motion.div>
 
-            <motion.div className="absolute inset-0 z-20"
+            <div className="absolute inset-0 z-20"
                 style={{
+                    marginTop: "130px",
                     backgroundImage: `url(/images/landing-page-band-cutout.png)`,
-                    backgroundPosition: "bottom",
+                    backgroundPosition: "top",//"bottom",
                     backgroundSize: "cover",
-                    y: bg2
-                    //y: progressions[1]
                 }}
             >
 
-            </motion.div>
-        </div>
+            </div>
+        </Styled.Main>
+        //</div>
     )
 }
 

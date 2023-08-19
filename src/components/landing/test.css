@@ -1,0 +1,60 @@
+.test{
+    height: 200vh;
+    border: 10px solid red;
+}
+
+@media screen and (max-width: 900px){
+    .test{
+        height: 185vh;
+        border: 10px solid rgb(0, 0, 0);
+    }
+}
+
+@media screen and (max-width: 900px){
+    .test{
+        height: 185vh;
+        border: 10px solid rgb(0, 0, 0);
+    }
+}
+
+@media screen and (max-width: 768px){
+    .test{
+        height: 170vh;
+        border: 10px solid rgb(33,33, 33);
+    }
+}
+
+@media screen and (max-width: 640px){
+    .test{
+        height: 155vh;
+        border: 10px solid rgb(66,66,66 );
+    }
+}
+
+@media screen and (max-width: 540px){
+    .test{
+        height: 140vh;
+        border: 10px solid rgb(99,99, 99);
+    }
+}
+
+@media screen and (max-width: 480px){
+    .test{
+        height: 130vh;
+        border: 10px solid rgb(133,133, 133);
+    }
+}
+
+@media screen and (max-width: 384px){
+    .test{
+        height: 110vh;
+        border: 10px solid rgb(177,177, 177);
+    }
+}
+
+@media screen and (max-width: 300px){
+    .test{
+        height: 100vh;
+        border: 10px solid rgb(222,222, 222)
+    }
+}

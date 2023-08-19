@@ -25,9 +25,9 @@
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", 
-    "src/components/landing/TestLanding.tsx", 
-    "src/app/(pages)/index.jsx",
-    "src/components/landing/LandingParallaxBg.tsx"
+    // "src/components/landing/TestLanding.tsx", 
+    // "src/app/(pages)/index.jsx",
+    // "src/components/landing/LandingParallaxBg.tsx"
   ],
   "exclude": ["node_modules"]
 }
