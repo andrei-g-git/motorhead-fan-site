@@ -8,3 +8,5 @@ export {useVerticalParallax} from "./hooks/input";
 
 //export {withSParallax} from "./higher-order/input";
 export {default as LandingParallaxBg} from "./landing/LandingParallaxBg";
+
+export {default as BandFixedBg} from "./landing/BandFixedBg";

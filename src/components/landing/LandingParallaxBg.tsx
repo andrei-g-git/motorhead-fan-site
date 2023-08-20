@@ -1,11 +1,10 @@
 "use client"
 import {motion, useScroll, useTransform} from "framer-motion";
 import { useRef } from "react";
-import "./test.css"
 
 import * as Styled from "./styles";
 
-const LandingParallaxBg = () => {
+const LandingParallaxBg = ({layer}: {layer: number}) => {
     const ref = useRef(null);
     //const progressions = useVerticalParallax(ref, "50%");
     const {scrollYProgress} = useScroll({
@@ -19,19 +18,8 @@ const LandingParallaxBg = () => {
     // console.log(progressions)    //same result and yet the first element doesn't work...
 
     return (
-        // <div //className="w-full overflow-hidden relative grid place-items-center"
-        //     className="test"
-        //     style={{
-        //         width: "100%",
-        //         overflowX: "hidden",
-        //         position: "relative",
-        //     }}
-        //     ref={ref}
-        // >
         <Styled.Main ref={ref}>
-
-
-            <motion.div className="absolute inset-0 z-0"
+            <motion.div className={`absolute inset-0 z-${layer * 10}`}
                 style={{
                     backgroundImage: `url(/images/sky.png)`,
                     backgroundPosition: "top",
@@ -42,7 +30,7 @@ const LandingParallaxBg = () => {
 
             </motion.div>
 
-            <div className="absolute inset-0 z-20"
+            <div className={`absolute inset-0 z-${layer * 10}`}
                 style={{
                     marginTop: "130px",
                     backgroundImage: `url(/images/landing-page-band-cutout.png)`,
@@ -53,7 +41,6 @@ const LandingParallaxBg = () => {
 
             </div>
         </Styled.Main>
-        //</div>
     )
 }
 

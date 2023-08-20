@@ -1,3 +1,4 @@
+import { PictureFile } from "@/app/lib/types";
 import styled, {css} from "styled-components";
 
 const createMediaQueries = () => {
@@ -20,5 +21,17 @@ export const Main = styled.div`
     position: relative;
 
     ${createMediaQueries()}
+`;
 
-`
+export const FixedAttatchedBackground = styled.div<{backgroundimage: PictureFile}>`
+    width: "100vw";
+    height: "70vh";
+    background-image: ${props => `url(${props.backgroundimage})`};;
+    background-size: "cover";
+    background-position: "center";
+    background-attachment: "fixed";
+    top: 0; 
+    right: 0; 
+    bottom: 0;
+    left: 0;
+`;
