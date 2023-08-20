@@ -1,10 +1,14 @@
 import { Tours } from '@/app/lib/types';
-import React from 'react'
+import Video from '@/components/Video';
 
-const ToursPreview = ({tours}: {tours: Tours}) => {
+const TourPreviews = ({tours}: {tours: Tours}) => {
     return (
         <div>
             Tours
+
+            <Video src="https://www.youtube.com/embed/H7-ayoJKZ_Q"
+                title="change-this"
+            />
             {
                 tours.map(tour => 
                     <div>
@@ -19,4 +23,4 @@ const ToursPreview = ({tours}: {tours: Tours}) => {
     )
 }
 
-export default ToursPreview;
+export default TourPreviews;

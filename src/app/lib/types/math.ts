@@ -5,3 +5,5 @@ export type SmallMultiplier = {
 }
 
 export type FramerMotionScrollRange = number | EndsWith<"%">;
+
+export type NumericString = `${number}`;

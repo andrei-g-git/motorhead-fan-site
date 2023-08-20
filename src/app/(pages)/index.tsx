@@ -6,7 +6,7 @@ import Link from 'next/link';
 import { ArticlePreview, ReadMore, withLink/* , withParallax */ } from '@/components';
 import { getArticleMetadata } from '../lib';
 import path, { relative } from 'path';
-import ToursPreview from '@/components/tours/ToursPreview';
+import TourPreviews from '@/components/landing/TourPreviews';
 import * as Styled from "./styles";
 import LandingParallaxBg from '@/components/landing/LandingParallaxBg';
 import BandFixedBg from '@/components/landing/BandFixedBg';
@@ -48,27 +48,15 @@ const Homeee = (/* {slugs}: {slugs: string[]} */) => {
         }}> 
             <LandingParallaxBg layer={1}/>
             
-            {/* <div style={{
-                width: "100%",
-                height: "400px",
-                backgroundColor: "green"
-            }}>
-
-            </div> */}
             <ArticlePreviews metadata={allArticleMetadata}/>
 
             <BandFixedBg backgroundimage="/images/home-parallax-image-1.jpg"/>
 
-
-            <div style={{
-                width: "100%",
-                height: "600px",
-                backgroundColor: "blue"
-            }}>
-
-            </div>            
+            <TourPreviews tours={tours} />
 
             <BandFixedBg backgroundimage="/images/home-parallax-image-2.jpg"/>
+
+            <ArticlePreviews metadata={allInterviewMetadata}/>
         </div>
 
     )
