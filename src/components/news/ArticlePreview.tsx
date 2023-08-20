@@ -2,7 +2,7 @@ type ArticlePreviewProps = {
     title: string,
     subtitle: string,
     link: string,
-    RedirectButton: React.FunctionComponent<any>
+    RedirectButton: React.FunctionComponent<{link: string}>
 }
 
 const ArticlePreview = ({title, subtitle, link, RedirectButton}: ArticlePreviewProps) => {

@@ -12,6 +12,7 @@ import LandingParallaxBg from '@/components/landing/LandingParallaxBg';
 import BandFixedBg from '@/components/landing/BandFixedBg';
 import bandPic1 from "../../../public/images/home-parallax-image-1.jpg";
 import bandPic2 from "../../../public/images/home-parallax-image-2.jpg";
+import ArticlePreviews from '@/components/landing/ArticlePreviews';
 
 const Homeee = (/* {slugs}: {slugs: string[]} */) => {
     let slugs = getNewsMetadata();
@@ -47,13 +48,14 @@ const Homeee = (/* {slugs}: {slugs: string[]} */) => {
         }}> 
             <LandingParallaxBg layer={1}/>
             
-            <div style={{
+            {/* <div style={{
                 width: "100%",
                 height: "400px",
                 backgroundColor: "green"
             }}>
 
-            </div>
+            </div> */}
+            <ArticlePreviews metadata={allArticleMetadata}/>
 
             <BandFixedBg backgroundimage="/images/home-parallax-image-1.jpg"/>
 
