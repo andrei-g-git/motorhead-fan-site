@@ -5,3 +5,7 @@ export type Params = {
         slug: string
     }
 }
+
+export type RoutePath = `/${string}`;
+
+export type RouteName = "home" | "news" | "interviews" | "tours" | "about" | "contact";
