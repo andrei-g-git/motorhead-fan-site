@@ -2,36 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-details > summary {
-  list-style: none;
-}
-details > summary::-webkit-details-marker,
-/* details > summary::-moz-details-marker,
-details > summary::-ms-details-marker,
-details > summary::-o-details-marker, */
-details > summary::marker {
-  display: none;
-}
-
-
-details
-{
-    height: 8rem;
-    transition: height 2s ease-in-out;
-    overflow: hidden;
-}
-
-/* details:not([open]) 
-{
-    height: 8rem;
-
-} */
-
-details[open] 
-{
-    height: calc(8rem + 96rem);
-
-}
 
 
 

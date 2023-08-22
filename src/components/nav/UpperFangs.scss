@@ -1,0 +1,42 @@
+
+
+@mixin pseudo-fang($background-image){
+	//$content: "";
+	$content: null;//$background-image 50px 0 no-repeat;
+
+	@for $i from 1 through 5{
+		$content: append(
+			$content, 
+			$background-image 50px 0 no-repeat, 
+			$separator: comma
+		);
+		@media (min-width: ($i * 200px)){
+			content: "";//$content;
+			background-image: $content;
+			background-size: 50px 100px;
+			display: flex;
+			width: 100vh;
+			height: 150px;
+
+		}
+	}
+}
+
+
+.left-fangs::before{
+	@include pseudo-fang(url(/images/fang.png));
+
+}
+
+	// .left-fangs,
+	// .right-fangs{
+	// 	&::before{
+	// 		$content: "";
+	// 		@for $i from 1 through 3{
+	// 			@media (min-width: ($i * 400px)){
+	// 				$content: $content + "X";
+	// 				content: $content;
+	// 			}
+	// 		}
+	// 	}
+	// }

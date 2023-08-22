@@ -1,10 +1,10 @@
-import React from 'react'
+import React, { ReactNode } from 'react'
 import Image from 'next/image';
 import "./Hamburger.css";
 
-const Hamburger = () => {
+const Hamburger = ({children}: {children: ReactNode}) => {
     return (
-        <div className='hamburger-container'>
+        <div className="hamburger-container sm:hidden">
             <input id="navbar-toggle-faux-checkbox"
                 type='checkbox'
             />
@@ -16,11 +16,12 @@ const Hamburger = () => {
                 />                
             </label>
             <div className="hacky-navbar bg-lime-400 flex flex-col w-full">
-                <p>blah 1</p>
-                
-                <p>blah 2</p>
-
-                <p>blah 3</p>                
+                <div className="flex flex-col align-center gap-20 py-20">
+                    {
+                        children
+                    }                          
+                </div>
+         
             </div>
         </div>
     )

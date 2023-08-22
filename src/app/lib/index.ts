@@ -10,3 +10,5 @@ export {
 } from "./markdown";
 
 export {isNumeric} from "./utils"
+
+export {routes} from "./constants/routes";

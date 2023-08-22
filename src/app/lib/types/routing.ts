@@ -9,3 +9,8 @@ export type Params = {
 export type RoutePath = `/${string}`;
 
 export type RouteName = "home" | "news" | "interviews" | "tours" | "about" | "contact";
+
+export type RouteMeta = {
+    name: RouteName,
+    link: RoutePath
+}

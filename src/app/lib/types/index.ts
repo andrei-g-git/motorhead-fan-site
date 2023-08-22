@@ -2,7 +2,8 @@ export type {
     ContentPath,
     Params,
     RoutePath,
-    RouteName
+    RouteName,
+    RouteMeta
 } from "./routing";
 
 export type {Tours} from "./content";
