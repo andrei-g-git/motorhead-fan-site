@@ -1,19 +1,21 @@
 
 
-@mixin pseudo-fang($background-image){
-	//$content: "";
-	$content: null;//$background-image 50px 0 no-repeat;
+@font-face {
+	font-family: TeethAndFangs;
+	src: url(/fonts/TeethAndFangs.ttf);
+}
+
+@mixin pseudo-fang($fang-glyph, $initialContent){
+	$content: $initialContent;
 
 	@for $i from 1 through 5{
-		$content: append(
-			$content, 
-			$background-image 50px 0 no-repeat, 
-			$separator: comma
-		);
+
+		$content: $content + "b";
 		@media (min-width: ($i * 200px)){
-			content: "";//$content;
-			background-image: $content;
-			background-size: 50px 100px;
+			content: $content;
+			font-family: TeethAndFangs;
+			font-size: 8rem;
+			letter-spacing: -1.7rem;
 			display: flex;
 			width: 100vh;
 			height: 150px;
@@ -23,20 +25,12 @@
 }
 
 
+
 .left-fangs::before{
-	@include pseudo-fang(url(/images/fang.png));
+	@include pseudo-fang("b", "fb");
 
 }
 
-	// .left-fangs,
-	// .right-fangs{
-	// 	&::before{
-	// 		$content: "";
-	// 		@for $i from 1 through 3{
-	// 			@media (min-width: ($i * 400px)){
-	// 				$content: $content + "X";
-	// 				content: $content;
-	// 			}
-	// 		}
-	// 	}
-	// }
+
+
+
