@@ -2,21 +2,21 @@
 
 @font-face {
 	font-family: TeethAndFangs;
-	src: url(/fonts/TeethAndFangs.ttf);
+	src: url(/fonts/teeth-and-fangs.ttf);
 }
 
-@mixin pseudo-fang($fang-glyph, $initialContent){
-	$content: $initialContent;
+@mixin pseudo-fang($fang-glyph, $preContent, $postContent){
+	$content: $preContent;
 
 	@for $i from 1 through 5{
 
-		$content: $content + "b";
+		$content: $content + $fang-glyph;
 		@media (min-width: ($i * 200px)){
-			content: $content;
+			content: $content + $postContent;
 			font-family: TeethAndFangs;
 			font-size: 8rem;
 			letter-spacing: -1.7rem;
-			display: flex;
+			//display: flex;
 			width: 100vh;
 			height: 150px;
 
@@ -27,8 +27,11 @@
 
 
 .left-fangs::before{
-	@include pseudo-fang("b", "fb");
+	@include pseudo-fang("d", "", "dh");
+}
 
+.right-fangs::before{
+	@include pseudo-fang("b", "fb", "");
 }
 
 

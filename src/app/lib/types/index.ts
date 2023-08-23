@@ -15,3 +15,8 @@ export type{
 } from "./formats";
 
 export type {FramerMotionScrollRange} from "./math";
+
+export type {
+    QuadPositionClass, 
+    QuadPosition
+} from "./styling";

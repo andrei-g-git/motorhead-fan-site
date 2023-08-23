@@ -5,9 +5,10 @@ import Hamburger from "./Hamburger";
 import {routes} from "@/app/lib";
 
 import "./Navbar.css";
-import { RouteMeta, RoutePath } from "@/app/lib/types";
+import { QuadPosition, RouteMeta, RoutePath } from "@/app/lib/types";
 import { ReactNode } from "react";
 import UpperFangs from "./UpperFangs";
+import HalfJaw from "./HalfJaw";
 
 export const Navbar = () => {
     return (
@@ -19,8 +20,8 @@ export const Navbar = () => {
                 }
             </Hamburger>
 
-            <div className="nav-links-and-logo">
-                <div className="logo-wrapper"></div>
+            <div className="nav-inner-layout"> {/* layout probably shouldn't be 'inner' */}
+{/*                 <div className="logo-wrapper"></div>
                 {
                     routes.map(route => 
                         <div className="nav-link-nonmobile">
@@ -32,9 +33,24 @@ export const Navbar = () => {
                         </div>
                     )
                 }
+                <div className="left-half-upper-jaw">
+                    <HalfJaw position="top-left" />
+                </div>
+
+                <div className="right-half-upper-jaw">
+                    <HalfJaw position="top-right" />                    
+                </div> */}
+
+                {
+                    createNavHalf(populateNavLinks, routes.slice(0, 2), "half-nav", NavLink, HalfJaw, "top-left")
+                }
+                <div className="logo-wrapper" />
+                {
+                    createNavHalf(populateNavLinks, routes.slice(2, 4), "half-nav", NavLink, HalfJaw, "top-right")
+                }
             </div>
             
-            <UpperFangs />
+
                               
         </div>
     )
@@ -48,6 +64,22 @@ const populateNavLinks = (routes: RouteMeta[], wrapperClass: string, LinkElement
                     route.name.charAt(0).toUpperCase() + route.name.slice(1)
                 }
             </LinkElement>
+        </div>
+    )
+}
+
+const createNavHalf = (populateLinks: Function, halfRoutes: RouteMeta[], wrapperClass: string, LinkElement: React.FunctionComponent<any>, Fangs: React.FunctionComponent<any>,fangsPosition: QuadPosition): JSX.Element | ReactNode => {
+    return (
+        <div className="flex flex-col justify-between w-2/5">
+            <div className="flex justify-around max-[640px]:hidden">
+                {
+                    populateNavLinks(halfRoutes, "nav-link-noonmobile", LinkElement)
+                }                 
+            </div>
+            <div className="relative flex justify-center">
+                <Fangs position={fangsPosition} />                
+            </div>
+
         </div>
     )
 }

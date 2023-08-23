@@ -1,0 +1,56 @@
+
+
+@font-face {
+	font-family: TeethAndFangs;
+	src: url(/fonts/teeth-and-fangs.ttf);
+}
+
+@mixin pseudo-fang($fang-glyph, $preContent, $postContent){
+	$content: $preContent;
+
+	@for $i from 1 through 20{
+
+		$content: $content + $fang-glyph;
+		@media (min-width: ($i * 100px)){
+			content: $content + $postContent;
+			font-family: TeethAndFangs;
+			font-size: 4rem;
+			letter-spacing: -0.8rem;
+			width: 100vh;
+			height: 150px;
+            //vertical-align: bottom;
+            //position: absolute;
+            //top: 5rem;
+            //transform: translateY(5rem);
+		}
+	}
+}
+
+.top-left-fangs,
+.top-right-fangs,
+.bottom-left-fangs,
+.bottom-right-fangs{
+    //display: flex;
+    // width: 100vh;
+    // height: 150px;
+    //vertical-align: bottom;
+    //position: relative;
+    position: absolute;
+    top: 1rem;
+}
+
+.top-left-fangs::before{
+	@include pseudo-fang("h", "", "dh");
+}
+
+.top-right-fangs::before{
+	@include pseudo-fang("f", "fb", "");
+}
+
+.bottom-left-fangs{
+    @include pseudo-fang("e", "", "g" );
+}
+
+.bottom-right-fangs::before{
+	@include pseudo-fang("a", "ea", "");
+}

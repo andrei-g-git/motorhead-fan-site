@@ -3,7 +3,7 @@ import "./UpperFangs.scss";
 
 const UpperFangs = () => {
     return (
-        <div className="flex justify-between">
+        <div className="flex justify-between w-full">
 
             <div className="left-fangs">
 
