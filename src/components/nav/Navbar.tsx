@@ -9,11 +9,13 @@ import { QuadPosition, RouteMeta, RoutePath } from "@/app/lib/types";
 import { ReactNode } from "react";
 import UpperFangs from "./UpperFangs";
 import HalfJaw from "./HalfJaw";
+import MainLogo from "../MainLogo";
+import logoPic from "$/images/main-logo.png";
 
 export const Navbar = () => {
     return (
         //<div className="relative flex flex-wrap items-center justify-between w-full py-10 md:py-5 px-4 text-lg text-white bg-black z-30">
-        <div className='relative flex w-full bg-black text-white z-30'>
+        <div className='relative flex w-full h-24 bg-black text-white z-30 '>
             <div className='absolute top-4 left-4 sm:top-8 sm:left-8'>
                 <Hamburger>
                     {
@@ -26,7 +28,12 @@ export const Navbar = () => {
                 {
                     createNavHalf(populateNavLinks, routes.slice(0, 2), NavLink, HalfJaw, "top-left")
                 }
-                <div className="logo-wrapper" />
+
+                <div className="w-48 h-[130%]">
+                    <MainLogo src={logoPic} />                    
+                </div>
+
+
                 {
                     createNavHalf(populateNavLinks, routes.slice(2, 4), NavLink, HalfJaw, "top-right")
                 }
@@ -60,7 +67,7 @@ const createNavHalf = (populateLinks: Function, halfRoutes: RouteMeta[], LinkEle
                 
             </div>
             <div className="relative flex justify-center h-1/4">
-                <div className="absolute -top-4">
+                <div className="absolute -top-3">
                     <Fangs position={fangsPosition} />   
                 </div>
             </div>
