@@ -12,46 +12,26 @@ import HalfJaw from "./HalfJaw";
 
 export const Navbar = () => {
     return (
-        <div className="relative flex flex-wrap items-center justify-between w-full py-10 md:py-5 px-4 text-lg text-white bg-black z-30">
+        //<div className="relative flex flex-wrap items-center justify-between w-full py-10 md:py-5 px-4 text-lg text-white bg-black z-30">
+        <div className='relative flex w-full bg-black text-white z-30'>
+            <div className='absolute top-4 left-4 sm:top-8 sm:left-8'>
+                <Hamburger>
+                    {
+                        populateNavLinks(routes, "nav-link-mobile", NavLink)
+                    }
+                </Hamburger>
+            </div>
 
-            <Hamburger>
+            <div className='flex w-full'>
                 {
-                    populateNavLinks(routes, "nav-link-mobile", NavLink)
-                }
-            </Hamburger>
-
-            <div className="nav-inner-layout"> {/* layout probably shouldn't be 'inner' */}
-{/*                 <div className="logo-wrapper"></div>
-                {
-                    routes.map(route => 
-                        <div className="nav-link-nonmobile">
-                            <NavLink link={route.link}>
-                                {
-                                    route.name.charAt(0).toUpperCase() + route.name.slice(1)
-                                }
-                            </NavLink>
-                        </div>
-                    )
-                }
-                <div className="left-half-upper-jaw">
-                    <HalfJaw position="top-left" />
-                </div>
-
-                <div className="right-half-upper-jaw">
-                    <HalfJaw position="top-right" />                    
-                </div> */}
-
-                {
-                    createNavHalf(populateNavLinks, routes.slice(0, 2), "half-nav", NavLink, HalfJaw, "top-left")
+                    createNavHalf(populateNavLinks, routes.slice(0, 2), NavLink, HalfJaw, "top-left")
                 }
                 <div className="logo-wrapper" />
                 {
-                    createNavHalf(populateNavLinks, routes.slice(2, 4), "half-nav", NavLink, HalfJaw, "top-right")
+                    createNavHalf(populateNavLinks, routes.slice(2, 4), NavLink, HalfJaw, "top-right")
                 }
             </div>
-            
-
-                              
+                            
         </div>
     )
 }
@@ -68,18 +48,22 @@ const populateNavLinks = (routes: RouteMeta[], wrapperClass: string, LinkElement
     )
 }
 
-const createNavHalf = (populateLinks: Function, halfRoutes: RouteMeta[], wrapperClass: string, LinkElement: React.FunctionComponent<any>, Fangs: React.FunctionComponent<any>,fangsPosition: QuadPosition): JSX.Element | ReactNode => {
+const createNavHalf = (populateLinks: Function, halfRoutes: RouteMeta[], LinkElement: React.FunctionComponent<any>, Fangs: React.FunctionComponent<any>,fangsPosition: QuadPosition): JSX.Element | ReactNode => {
     return (
-        <div className="flex flex-col justify-between w-2/5">
-            <div className="flex justify-around max-[640px]:hidden">
-                {
-                    populateNavLinks(halfRoutes, "nav-link-noonmobile", LinkElement)
-                }                 
+        <div className="flex flex-col justify-between w-2/5 h-full">
+            <div className="flex items-center h-3/4">
+                <div className="flex justify-around max-[640px]:hidden w-full">
+                    {
+                        populateLinks(halfRoutes, "nav-link-noonmobile", LinkElement)
+                    } 
+                </div>
+                
             </div>
-            <div className="relative flex justify-center">
-                <Fangs position={fangsPosition} />                
+            <div className="relative flex justify-center h-1/4">
+                <div className="absolute -top-4">
+                    <Fangs position={fangsPosition} />   
+                </div>
             </div>
-
         </div>
     )
 }

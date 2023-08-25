@@ -16,8 +16,10 @@
 			font-family: TeethAndFangs;
 			font-size: 4rem;
 			letter-spacing: -0.8rem;
-			width: 100vh;
-			height: 150px;
+
+			// width: 100vh;
+			// height: 150px;
+
             //vertical-align: bottom;
             //position: absolute;
             //top: 5rem;
@@ -35,8 +37,12 @@
     // height: 150px;
     //vertical-align: bottom;
     //position: relative;
-    position: absolute;
-    top: 1rem;
+
+    //position: absolute;
+	
+    //top: 1rem;
+
+
 }
 
 .top-left-fangs::before{
