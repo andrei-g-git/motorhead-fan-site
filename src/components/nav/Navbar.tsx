@@ -1,7 +1,7 @@
 import Link from "next/link"
 import NavLink from "./NavLink"
 import Image from "next/image"
-import Hamburger from "./Hamburger";
+import Hamburger from "./HamburgerAndMobileNav";
 import {routes} from "@/app/lib";
 
 import "./Navbar.css";
@@ -14,10 +14,9 @@ import logoPic from "$/images/main-logo.png";
 
 export const Navbar = () => {
     return (
-        //<div className="relative flex flex-wrap items-center justify-between w-full py-10 md:py-5 px-4 text-lg text-white bg-black z-30">
         <div className='relative flex w-full h-24 bg-black text-white z-30 '>
-            <div className='absolute top-4 left-4 sm:top-8 sm:left-8'>
-                <Hamburger>
+            <div className='absolute top-4 left-4 sm:top-8 sm:left-8 w-[calc(100%-2rem)]  h-[calc(100%-2rem)]'>
+                <Hamburger navOffset="5%">
                     {
                         populateNavLinks(routes, "nav-link-mobile", NavLink)
                     }
@@ -67,7 +66,7 @@ const createNavHalf = (populateLinks: Function, halfRoutes: RouteMeta[], LinkEle
                 
             </div>
             <div className="relative flex justify-center h-1/4">
-                <div className="absolute -top-3">
+                <div className="absolute -top-3 relative">
                     <Fangs position={fangsPosition} />   
                 </div>
             </div>
