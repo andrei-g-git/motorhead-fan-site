@@ -3,12 +3,15 @@ import Video from '@/components/Video';
 
 const TourPreviews = ({tours}: {tours: Tours}) => {
     return (
-        <div>
+        <div className=''>
             Tours
 
-            <Video src="https://www.youtube.com/embed/H7-ayoJKZ_Q"
-                title="change-this"
-            />
+            <div className='w-full sm:px-[15%]'>
+                <Video src="https://www.youtube.com/embed/H7-ayoJKZ_Q"
+                    title="change-this"
+                />
+            </div>
+
             {
                 tours.map(tour => 
                     <div>

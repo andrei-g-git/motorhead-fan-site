@@ -1,26 +1,28 @@
-import Link from "next/link"
 import NavLink from "./NavLink"
-import Image from "next/image"
-import Hamburger from "./HamburgerAndMobileNav";
+import MobileNavMenu from "./MobileNavMenu";
 import {routes} from "@/app/lib";
-
-import "./Navbar.css";
-import { QuadPosition, RouteMeta, RoutePath } from "@/app/lib/types";
+import { QuadPosition, RouteMeta } from "@/app/lib/types";
 import { ReactNode } from "react";
-import UpperFangs from "./UpperFangs";
 import HalfJaw from "./HalfJaw";
 import MainLogo from "../MainLogo";
 import logoPic from "$/images/main-logo.png";
+import Hamburger from "./Hamburger";
+import "./Navbar.scss";
 
 export const Navbar = () => {
     return (
         <div className='relative flex w-full h-24 bg-black text-white z-30 '>
             <div className='absolute top-4 left-4 sm:top-8 sm:left-8 w-[calc(100%-2rem)]  h-[calc(100%-2rem)]'>
-                <Hamburger navOffset="5%">
+                <MobileNavMenu Hamburger={<Hamburger />}
+                    //navOffset="5%"
+                    offsetLeft="1%"
+                    offsetRight="2%"
+                    offsetTop="-5%"
+                >
                     {
                         populateNavLinks(routes, "nav-link-mobile", NavLink)
                     }
-                </Hamburger>
+                </MobileNavMenu>
             </div>
 
             <div className='flex w-full'>

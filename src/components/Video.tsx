@@ -5,20 +5,28 @@ const Video = ({
     src,
     width = "480",
     height = "270",
-    title
+    title,
+    portrait
 }:{
     src: StartsWith<"https://"> | StartsWith<"http://">,
     width? : NumericString,
     height?: NumericString,
-    title: string
+    title: string,
+    portrait?: boolean
 }) => {
     return (
-        <iframe className="concert-video-home col-md-6" 
-            src={src}
-            width={width}
-            height={height}
-            title={title}
-        />
+        // <div className={`w-full h-full relative overflow-hidden ${portrait? "pb-16/9" : "pb-9/16"}`} >
+        //     <iframe className="absoute inset-0 w-full h-full"
+        <div>
+            <iframe className={`w-full ${portrait? "aspect-portrait" : "aspect-video"}`}
+                src={src}
+                // width={width}
+                // height={height}
+                title={title}
+
+            />
+        </div>
+
     )
 }
 

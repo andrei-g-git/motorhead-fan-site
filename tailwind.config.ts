@@ -13,6 +13,12 @@ const config: Config = {
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
+      spacing: { //mine
+        '9/16': '56.25%'
+      },
+      aspectRatio: {
+        'portrait': '9/16'
+      }
     },
   },
   plugins: [],
