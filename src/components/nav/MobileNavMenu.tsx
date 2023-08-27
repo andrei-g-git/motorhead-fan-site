@@ -18,7 +18,7 @@ const MobileNavMenu = ({
     offsetTop?: EndsWith<"%"> | EndsWith<"px">
 }) => {
     return (
-        <div className="hamburger-container sm:hidden">
+        <div className="mobile-nav-container sm:hidden">
             <input id="navbar-toggle-faux-checkbox"
                 type='checkbox'
             />

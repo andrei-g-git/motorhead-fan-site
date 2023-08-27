@@ -1,7 +1,9 @@
+//"use server"
+
 import NavLink from "./NavLink"
 import MobileNavMenu from "./MobileNavMenu";
 import {routes} from "@/app/lib";
-import { QuadPosition, RouteMeta } from "@/app/lib/types";
+import { EndsWith, QuadPosition, RouteMeta } from "@/app/lib/types";
 import { ReactNode } from "react";
 import HalfJaw from "./HalfJaw";
 import MainLogo from "../MainLogo";
@@ -9,12 +11,11 @@ import logoPic from "$/images/main-logo.png";
 import Hamburger from "./Hamburger";
 import "./Navbar.scss";
 
-export const Navbar = () => {
+export const Navbar = ({height}: {height: EndsWith<"px">}) => {
     return (
         <div className='relative flex w-full h-24 bg-black text-white z-30 '>
             <div className='absolute top-4 left-4 sm:top-8 sm:left-8 w-[calc(100%-2rem)]  h-[calc(100%-2rem)]'>
                 <MobileNavMenu Hamburger={<Hamburger />}
-                    //navOffset="5%"
                     offsetLeft="1%"
                     offsetRight="2%"
                     offsetTop="-5%"

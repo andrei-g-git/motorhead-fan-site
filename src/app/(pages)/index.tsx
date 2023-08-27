@@ -2,19 +2,24 @@
 
 import React from 'react'
 import fs from "fs";
-import Link from 'next/link';
-import { ArticlePreview, ReadMore, withLink/* , withParallax */ } from '@/components';
 import { getArticleMetadata } from '../lib';
-import path, { relative } from 'path';
+import path from 'path';
 import TourPreviews from '@/components/landing/TourPreviews';
-import * as Styled from "./styles";
 import LandingParallaxBg from '@/components/landing/LandingParallaxBg';
 import BandFixedBg from '@/components/landing/BandFixedBg';
-import bandPic1 from "../../../public/images/home-parallax-image-1.jpg";
-import bandPic2 from "../../../public/images/home-parallax-image-2.jpg";
 import ArticlePreviews from '@/components/landing/ArticlePreviews';
 
-const Homeee = (/* {slugs}: {slugs: string[]} */) => {
+const Homeee = ({
+    //LandingParallaxBg
+    // BandFixedBg,
+    //     ArticlePreviews,
+    //     TourPreviews,
+}: {
+    //LandingParallaxBg: React.FunctionComponent<{layer: number}>
+    // BandFixedBg: React.FunctionComponent<any>,
+    // ArticlePreviews: React.FunctionComponent<any>,
+    // TourPreviews: React.FunctionComponent<any>,
+}) => {
     let slugs = getNewsMetadata();
     const allArticleMetadata = slugs.map(slug => {
         const data = getArticleMetadata("content/news", slug);

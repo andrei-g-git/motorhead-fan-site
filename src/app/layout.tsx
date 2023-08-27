@@ -2,6 +2,9 @@ import { Navbar } from '@/components/nav/Navbar'
 import './globals.css'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
+//import { withCollapseOnScroll } from '@/components/higher-order/input'
+import CollapsibleNav from '@/components/nav/CollapsibleNav'
+import { EndsWith } from './lib/types'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -15,10 +18,15 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
+  const navHeight = `${96 + 28}px` as EndsWith<"px">;
+  //const Nav = withCollapseOnScroll(Navbar, navHeight);
+
   return (
     <html lang="en">
       <body >
-        <Navbar />
+        <CollapsibleNav height={navHeight} > {/* whole thing should be separate component, this is messy */}
+          <Navbar height={navHeight} />
+        </CollapsibleNav>
           {children}
         <div>footer</div>
       </body>

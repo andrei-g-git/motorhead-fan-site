@@ -19,7 +19,7 @@ const LandingParallaxBg = ({layer}: {layer: number}) => {
 
     return (
         <Styled.Main ref={ref}>
-            <motion.div className={`absolute inset-0 z-${layer * 10}`}
+            <motion.div className={`absolute inset-0 z-10`}//z-${layer * 10}`}
                 style={{
                     backgroundImage: `url(/images/sky.png)`,
                     backgroundPosition: "top",
@@ -30,7 +30,7 @@ const LandingParallaxBg = ({layer}: {layer: number}) => {
 
             </motion.div>
 
-            <div className={`absolute inset-0 z-${layer * 10}`}
+            <div className={`absolute inset-0 z-${layer * 10}`} /* THE Z-INDEX MIGHT NOT WORK, I DON'T THINK IT"S POSSIBLE TO HAVE DYNAMIC TAILWIND CLASSES */
                 style={{
                     marginTop: "130px",
                     backgroundImage: `url(/images/landing-page-band-cutout.png)`,
